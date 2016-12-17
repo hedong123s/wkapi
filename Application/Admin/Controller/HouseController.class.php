@@ -6,9 +6,7 @@ use Think\Log;
 use Think\Upload;
 class HouseController extends Controller {
 	public function __construct(){
-		if(session('admin') != 1){
-			$this->error('信息错误','./login');
-		}
+		parent::__construct();
 	}
 
 	public function index(){

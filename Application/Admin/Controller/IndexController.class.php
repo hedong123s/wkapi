@@ -20,9 +20,6 @@ class IndexController extends Controller {
     }
 
 	public function index(){
-		if(session('admin') != 1){
-			$this->error('信息错误','./login');
-		}
 		$this->display();
 	}
 
