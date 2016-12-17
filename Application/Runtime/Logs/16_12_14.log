@@ -1,0 +1,208 @@
+[ 2016-12-14T16:26:34+08:00 ] ::1 /52php/api/
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T16:27:34+08:00 ] ::1 /52php/api/
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T16:28:04+08:00 ] ::1 /52php/api/
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T16:35:50+08:00 ] ::1 /52php/api/
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.022002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.042004s ]
+
+[ 2016-12-14T16:36:51+08:00 ] ::1 /52php/api/
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-14T16:37:52+08:00 ] 127.0.0.1 /52php/api/
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-12-14T16:38:47+08:00 ] 127.0.0.1 /52php/api/
+mb: 1111111111
+[ 2016-12-14T16:38:47+08:00 ] 127.0.0.1 /52php/api/
+info: 
+[ 2016-12-14T16:38:48+08:00 ] 127.0.0.1 /52php/api/
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Trying to get property of non-object D:\wamp\www\52php\api\Application\Home\Controller\IndexController.class.php 第 23 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\52php\api\Application\Home\Controller\IndexController.class.php 第 23 行.
+NOTIC: [8] Trying to get property of non-object D:\wamp\www\52php\api\Application\Home\Controller\IndexController.class.php 第 33 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\52php\api\Application\Home\Controller\IndexController.class.php 第 33 行.
+NOTIC: [8] Trying to get property of non-object D:\wamp\www\52php\api\Application\Home\Controller\IndexController.class.php 第 49 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\52php\api\Application\Home\Controller\IndexController.class.php 第 49 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\52php\api\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.064007s ]
+SQL: SELECT * FROM `hd_wk` LIMIT 3   [ RunTime:0.051005s ]
+
+[ 2016-12-14T16:39:04+08:00 ] ::1 /52php/api/
+mb: 1111111111
+[ 2016-12-14T16:39:04+08:00 ] ::1 /52php/api/
+info: {"area":["不重要"],"price":["不限价格"],"huxin":["不限户型"]}
+[ 2016-12-14T16:39:04+08:00 ] ::1 /52php/api/
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\52php\api\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.048004s ]
+SQL: SELECT * FROM `hd_wk` WHERE ( `area` LIKE '%%' ) AND ( `price_type` LIKE '%%' ) AND ( `huxin_type` LIKE '%%' ) LIMIT 3   [ RunTime:0.048005s ]
+
+[ 2016-12-14T16:39:11+08:00 ] ::1 /52php/api/
+mb: 1111111111
+[ 2016-12-14T16:39:11+08:00 ] ::1 /52php/api/
+info: {"area":["不重要"],"price":["不限价格"],"huxin":["不限户型"]}
+[ 2016-12-14T16:39:11+08:00 ] ::1 /52php/api/
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\52php\api\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.046005s ]
+SQL: SELECT * FROM `hd_wk` WHERE ( `area` LIKE '%%' ) AND ( `price_type` LIKE '%%' ) AND ( `huxin_type` LIKE '%%' ) LIMIT 3   [ RunTime:0.046005s ]
+
+[ 2016-12-14T16:39:16+08:00 ] ::1 /52php/api/
+mb: 1111111111
+[ 2016-12-14T16:39:16+08:00 ] ::1 /52php/api/
+info: {"area":["不重要"],"price":["不限价格"],"huxin":["单间","公寓","两房"]}
+[ 2016-12-14T16:39:17+08:00 ] ::1 /52php/api/
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\52php\api\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.054005s ]
+SQL: SELECT * FROM `hd_wk` WHERE ( `area` LIKE '%%' ) AND ( `price_type` LIKE '%%' ) AND ( (`huxin_type` LIKE '%单间%' OR `huxin_type` LIKE '%公寓%' OR `huxin_type` LIKE '%两房%') ) LIMIT 3   [ RunTime:0.054005s ]
+
+[ 2016-12-14T16:39:21+08:00 ] ::1 /52php/api/
+mb: 1111111111
+[ 2016-12-14T16:39:21+08:00 ] ::1 /52php/api/
+info: {"area":["不重要"],"price":["不限价格"],"huxin":["两房"]}
+[ 2016-12-14T16:39:22+08:00 ] ::1 /52php/api/
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\52php\api\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.049005s ]
+SQL: SELECT * FROM `hd_wk` WHERE ( `area` LIKE '%%' ) AND ( `price_type` LIKE '%%' ) AND ( (`huxin_type` LIKE '%两房%') ) LIMIT 3   [ RunTime:0.049005s ]
+
+[ 2016-12-14T16:39:22+08:00 ] ::1 /52php/api/index.php?a=detail
+keywords: 配套先行、山景洋房、叠墅
+[ 2016-12-14T16:39:22+08:00 ] ::1 /52php/api/index.php?a=detail
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\52php\api\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.052005s ]
+SQL: SELECT * FROM `hd_wk` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.052005s ]
+
+[ 2016-12-14T17:25:30+08:00 ] 127.0.0.1 /52php/api/admin/
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.014001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.161016s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.162016s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.030003s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.030003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.022002s ]
+INFO: [ app_end ] --END-- [ RunTime:0.022002s ]
+
+[ 2016-12-14T17:25:30+08:00 ] 127.0.0.1 /52php/api/admin/welcome.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Welcome
+
+[ 2016-12-14T17:25:35+08:00 ] 127.0.0.1 /52php/api/index.php/Admin/user/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:25:36+08:00 ] 127.0.0.1 /52php/api/index.php/Admin/user/logs.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:25:40+08:00 ] 127.0.0.1 /52php/api/index.php/Admin/house/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\52php\api\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.062006s ]
+SQL: SELECT * FROM `hd_wk` ORDER BY id desc  [ RunTime:0.055006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.133014s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.135014s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:25:45+08:00 ] 127.0.0.1 /52php/api/index.php/Admin/house/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\52php\api\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.046004s ]
+SQL: SELECT * FROM `hd_wk` ORDER BY id desc  [ RunTime:0.047004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.020002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-14T17:25:50+08:00 ] 127.0.0.1 /52php/api/index.php/Admin/house/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: r D:\wamp\www\52php\api\Application\Runtime\Cache\Admin\595a8b6c6b813a845e7ace1c7d99ee7c.php 第 34 行.
+NOTIC: [8] Undefined variable: r D:\wamp\www\52php\api\Application\Runtime\Cache\Admin\595a8b6c6b813a845e7ace1c7d99ee7c.php 第 55 行.
+NOTIC: [8] Undefined variable: r D:\wamp\www\52php\api\Application\Runtime\Cache\Admin\595a8b6c6b813a845e7ace1c7d99ee7c.php 第 71 行.
+NOTIC: [8] Undefined variable: r D:\wamp\www\52php\api\Application\Runtime\Cache\Admin\595a8b6c6b813a845e7ace1c7d99ee7c.php 第 79 行.
+NOTIC: [8] Undefined variable: r D:\wamp\www\52php\api\Application\Runtime\Cache\Admin\595a8b6c6b813a845e7ace1c7d99ee7c.php 第 95 行.
+NOTIC: [8] Undefined variable: r D:\wamp\www\52php\api\Application\Runtime\Cache\Admin\595a8b6c6b813a845e7ace1c7d99ee7c.php 第 132 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.077008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.078008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
