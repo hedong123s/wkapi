@@ -38,7 +38,7 @@
       <dt><i class="icon-user"></i> 用户中心<i class="iconfont menu_dropdown-arrow">&#xf02a9;</i></dt>
       <dd>
         <ul>
-          <li><a _href="index.php?m=admin&c=user&a=logs" href="javascript:;">用户日志</a></li>
+          <li><a _href="index.php?m=admin&c=user&a=logs" href="javascript:;" target="_top">用户日志</a></li>
         </ul>
       </dd>
     </dl>
@@ -48,7 +48,7 @@
       <dt><i class="icon-cogs"></i> 房屋管理<i class="iconfont menu_dropdown-arrow">&#xf02a9;</i></dt>
       <dd>
         <ul>
-          <li><a _href="index.php?m=admin&c=house&a=index" href="javascript:void(0)">房屋列表</a></li>
+          <li><a _href="index.php?m=admin&c=house&a=index" href="javascript:void(0)"  target="_top">房屋列表</a></li>
         </ul>
       </dd>
     </dl>

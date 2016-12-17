@@ -1464,3 +1464,1095 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTrace [ RunTime:0.004000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
 
+[ 2016-12-17T23:13:47+08:00 ] ::1 /wkapi/index.php?m=admin&c=index&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-12-17T23:13:47+08:00 ] ::1 /wkapi/index.php?m=admin&c=welcome&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+
+[ 2016-12-17T23:13:50+08:00 ] ::1 /wkapi/index.php?m=admin&c=user&a=logs
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_feedback` [ RunTime:0.060003s ]
+SQL: SELECT * FROM `hd_feedback`  [ RunTime:0.059003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.046002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-12-17T23:13:51+08:00 ] ::1 /wkapi/index.php?m=admin&c=user&a=logs
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_feedback` [ RunTime:0.064003s ]
+SQL: SELECT * FROM `hd_feedback`  [ RunTime:0.064003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.078005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.078005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-12-17T23:13:57+08:00 ] ::1 /wkapi/index.php?m=admin&c=house&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.066004s ]
+SQL: SELECT * FROM `hd_wk` ORDER BY id desc  [ RunTime:0.063003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hd_wkdetail` [ RunTime:0.064004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 16 ) LIMIT 1   [ RunTime:0.082005s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 15 ) LIMIT 1   [ RunTime:0.072004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 14 ) LIMIT 1   [ RunTime:0.062004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 13 ) LIMIT 1   [ RunTime:0.062003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 12 ) LIMIT 1   [ RunTime:0.065004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 11 ) LIMIT 1   [ RunTime:0.062004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 10 ) LIMIT 1   [ RunTime:0.064004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 9 ) LIMIT 1   [ RunTime:0.062003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 8 ) LIMIT 1   [ RunTime:0.062004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 7 ) LIMIT 1   [ RunTime:0.061003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 6 ) LIMIT 1   [ RunTime:0.062003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 5 ) LIMIT 1   [ RunTime:0.062004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 4 ) LIMIT 1   [ RunTime:0.061003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 3 ) LIMIT 1   [ RunTime:0.061004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 2 ) LIMIT 1   [ RunTime:0.062004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 1 ) LIMIT 1   [ RunTime:0.062003s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:1.169067s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.169067s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.004001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004001s ]
+
+[ 2016-12-17T23:13:58+08:00 ] ::1 /wkapi/index.php?m=admin&c=house&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.059004s ]
+SQL: SELECT * FROM `hd_wk` ORDER BY id desc  [ RunTime:0.060003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hd_wkdetail` [ RunTime:0.060003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 16 ) LIMIT 1   [ RunTime:0.059004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 15 ) LIMIT 1   [ RunTime:0.059003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 14 ) LIMIT 1   [ RunTime:0.059004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 13 ) LIMIT 1   [ RunTime:0.061003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 12 ) LIMIT 1   [ RunTime:0.059004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 11 ) LIMIT 1   [ RunTime:0.060003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 10 ) LIMIT 1   [ RunTime:0.065004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 9 ) LIMIT 1   [ RunTime:0.059004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 8 ) LIMIT 1   [ RunTime:0.060003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 7 ) LIMIT 1   [ RunTime:0.062004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 6 ) LIMIT 1   [ RunTime:0.059003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 5 ) LIMIT 1   [ RunTime:0.059003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 4 ) LIMIT 1   [ RunTime:0.058003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 3 ) LIMIT 1   [ RunTime:0.060003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 2 ) LIMIT 1   [ RunTime:0.059003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 1 ) LIMIT 1   [ RunTime:0.060003s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:1.191068s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.191068s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-12-17T23:14:02+08:00 ] ::1 /wkapi/index.php?m=admin&c=house&a=edit&id=12
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.059004s ]
+SQL: SELECT * FROM `hd_wk` WHERE ( `id` = 12 ) LIMIT 1   [ RunTime:0.062003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.185011s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.185011s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-12-17T23:18:31+08:00 ] ::1 /wkapi/index.php?m=admin&c=user&a=logs
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_feedback` [ RunTime:0.065004s ]
+SQL: SELECT * FROM `hd_feedback`  [ RunTime:0.063004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-12-17T23:18:35+08:00 ] ::1 /wkapi/index.php?m=admin&c=user&a=logs
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_feedback` [ RunTime:0.064004s ]
+SQL: SELECT * FROM `hd_feedback`  [ RunTime:0.064004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-17T23:19:10+08:00 ] ::1 /wkapi/index.php?m=admin&c=index&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-12-17T23:19:11+08:00 ] ::1 /wkapi/index.php?m=admin&c=welcome&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-12-17T23:19:14+08:00 ] ::1 /wkapi/index.php?m=admin&c=house&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.061004s ]
+SQL: SELECT * FROM `hd_wk` ORDER BY id desc  [ RunTime:0.058003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hd_wkdetail` [ RunTime:0.058003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 16 ) LIMIT 1   [ RunTime:0.057004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 15 ) LIMIT 1   [ RunTime:0.057003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 14 ) LIMIT 1   [ RunTime:0.057003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 13 ) LIMIT 1   [ RunTime:0.057004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 12 ) LIMIT 1   [ RunTime:0.057003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 11 ) LIMIT 1   [ RunTime:0.058003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 10 ) LIMIT 1   [ RunTime:0.060003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 9 ) LIMIT 1   [ RunTime:0.058003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 8 ) LIMIT 1   [ RunTime:0.057004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 7 ) LIMIT 1   [ RunTime:0.058003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 6 ) LIMIT 1   [ RunTime:0.057003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 5 ) LIMIT 1   [ RunTime:0.058003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 4 ) LIMIT 1   [ RunTime:0.060003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 3 ) LIMIT 1   [ RunTime:0.058003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 2 ) LIMIT 1   [ RunTime:0.057003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 1 ) LIMIT 1   [ RunTime:0.057004s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:1.035060s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.036060s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-12-17T23:19:18+08:00 ] ::1 /wkapi/index.php?m=admin&c=welcome&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-12-17T23:19:31+08:00 ] ::1 /wkapi/index.php?m=admin&c=index&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-12-17T23:19:32+08:00 ] ::1 /wkapi/index.php?m=admin&c=welcome&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+
+[ 2016-12-17T23:19:39+08:00 ] ::1 /wkapi/index.php?m=admin&c=house&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.064003s ]
+SQL: SELECT * FROM `hd_wk` ORDER BY id desc  [ RunTime:0.063004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hd_wkdetail` [ RunTime:0.064003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 16 ) LIMIT 1   [ RunTime:0.063003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 15 ) LIMIT 1   [ RunTime:0.065004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 14 ) LIMIT 1   [ RunTime:0.063004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 13 ) LIMIT 1   [ RunTime:0.065004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 12 ) LIMIT 1   [ RunTime:0.063003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 11 ) LIMIT 1   [ RunTime:0.063004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 10 ) LIMIT 1   [ RunTime:0.063004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 9 ) LIMIT 1   [ RunTime:0.062003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 8 ) LIMIT 1   [ RunTime:0.063004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 7 ) LIMIT 1   [ RunTime:0.063004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 6 ) LIMIT 1   [ RunTime:0.063003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 5 ) LIMIT 1   [ RunTime:0.062004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 4 ) LIMIT 1   [ RunTime:0.062004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 3 ) LIMIT 1   [ RunTime:0.065004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 2 ) LIMIT 1   [ RunTime:0.063003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 1 ) LIMIT 1   [ RunTime:0.064004s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:1.136065s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.136065s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004001s ]
+
+[ 2016-12-17T23:19:46+08:00 ] ::1 /wkapi/index.php?m=admin&c=welcome&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-12-17T23:19:48+08:00 ] ::1 /wkapi/index.php?m=admin&c=index&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-12-17T23:19:48+08:00 ] ::1 /wkapi/index.php?m=admin&c=welcome&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-12-17T23:19:52+08:00 ] ::1 /wkapi/index.php?m=admin&c=house&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.061003s ]
+SQL: SELECT * FROM `hd_wk` ORDER BY id desc  [ RunTime:0.061004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hd_wkdetail` [ RunTime:0.060004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 16 ) LIMIT 1   [ RunTime:0.061003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 15 ) LIMIT 1   [ RunTime:0.061004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 14 ) LIMIT 1   [ RunTime:0.060004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 13 ) LIMIT 1   [ RunTime:0.060003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 12 ) LIMIT 1   [ RunTime:0.061004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 11 ) LIMIT 1   [ RunTime:0.060003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 10 ) LIMIT 1   [ RunTime:0.060004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 9 ) LIMIT 1   [ RunTime:0.060003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 8 ) LIMIT 1   [ RunTime:0.062004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 7 ) LIMIT 1   [ RunTime:0.061003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 6 ) LIMIT 1   [ RunTime:0.060004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 5 ) LIMIT 1   [ RunTime:0.060003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 4 ) LIMIT 1   [ RunTime:0.060003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 3 ) LIMIT 1   [ RunTime:0.060004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 2 ) LIMIT 1   [ RunTime:0.060003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 1 ) LIMIT 1   [ RunTime:0.061004s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:1.083062s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.083062s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-12-17T23:19:55+08:00 ] ::1 /wkapi/index.php?m=admin&c=welcome&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-12-17T23:19:57+08:00 ] ::1 /wkapi/index.php?m=admin&c=index&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-12-17T23:19:57+08:00 ] ::1 /wkapi/index.php?m=admin&c=welcome&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-12-17T23:20:02+08:00 ] ::1 /wkapi/index.php?m=admin&c=house&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.063003s ]
+SQL: SELECT * FROM `hd_wk` ORDER BY id desc  [ RunTime:0.061004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hd_wkdetail` [ RunTime:0.062004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 16 ) LIMIT 1   [ RunTime:0.061004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 15 ) LIMIT 1   [ RunTime:0.061003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 14 ) LIMIT 1   [ RunTime:0.061004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 13 ) LIMIT 1   [ RunTime:0.061003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 12 ) LIMIT 1   [ RunTime:0.062004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 11 ) LIMIT 1   [ RunTime:0.061003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 10 ) LIMIT 1   [ RunTime:0.062004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 9 ) LIMIT 1   [ RunTime:0.061004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 8 ) LIMIT 1   [ RunTime:0.061003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 7 ) LIMIT 1   [ RunTime:0.061004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 6 ) LIMIT 1   [ RunTime:0.061003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 5 ) LIMIT 1   [ RunTime:0.061004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 4 ) LIMIT 1   [ RunTime:0.061003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 3 ) LIMIT 1   [ RunTime:0.061004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 2 ) LIMIT 1   [ RunTime:0.062004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 1 ) LIMIT 1   [ RunTime:0.061003s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:1.088062s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.088062s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-12-17T23:20:18+08:00 ] ::1 /wkapi/index.php?m=admin&c=welcome&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-12-17T23:20:20+08:00 ] ::1 /wkapi/index.php?m=admin&c=index&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-12-17T23:20:20+08:00 ] ::1 /wkapi/index.php?m=admin&c=welcome&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-12-17T23:20:25+08:00 ] ::1 /wkapi/index.php?m=admin&c=house&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.060003s ]
+SQL: SELECT * FROM `hd_wk` ORDER BY id desc  [ RunTime:0.060004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hd_wkdetail` [ RunTime:0.070004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 16 ) LIMIT 1   [ RunTime:0.064003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 15 ) LIMIT 1   [ RunTime:0.063004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 14 ) LIMIT 1   [ RunTime:0.061004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 13 ) LIMIT 1   [ RunTime:0.062003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 12 ) LIMIT 1   [ RunTime:0.060004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 11 ) LIMIT 1   [ RunTime:0.063003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 10 ) LIMIT 1   [ RunTime:0.060004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 9 ) LIMIT 1   [ RunTime:0.060003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 8 ) LIMIT 1   [ RunTime:0.061004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 7 ) LIMIT 1   [ RunTime:0.062004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 6 ) LIMIT 1   [ RunTime:0.060003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 5 ) LIMIT 1   [ RunTime:0.063004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 4 ) LIMIT 1   [ RunTime:0.061003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 3 ) LIMIT 1   [ RunTime:0.060004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 2 ) LIMIT 1   [ RunTime:0.060003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 1 ) LIMIT 1   [ RunTime:0.060004s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:1.099063s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.100063s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-12-17T23:25:18+08:00 ] ::1 /wkapi/index.php?m=admin&c=index&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-12-17T23:25:18+08:00 ] ::1 /wkapi/index.php?m=admin&c=welcome&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+
+[ 2016-12-17T23:25:21+08:00 ] ::1 /wkapi/index.php?m=admin&c=user&a=logs
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_feedback` [ RunTime:0.062004s ]
+SQL: SELECT * FROM `hd_feedback`  [ RunTime:0.072004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.028002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-12-17T23:25:30+08:00 ] ::1 /wkapi/index.php?m=admin&c=house&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.065004s ]
+SQL: SELECT * FROM `hd_wk` ORDER BY id desc  [ RunTime:0.064004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hd_wkdetail` [ RunTime:0.064004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 16 ) LIMIT 1   [ RunTime:0.063004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 15 ) LIMIT 1   [ RunTime:0.064003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 14 ) LIMIT 1   [ RunTime:0.066004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 13 ) LIMIT 1   [ RunTime:0.063004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 12 ) LIMIT 1   [ RunTime:0.064004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 11 ) LIMIT 1   [ RunTime:0.064003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 10 ) LIMIT 1   [ RunTime:0.064004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 9 ) LIMIT 1   [ RunTime:0.063004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 8 ) LIMIT 1   [ RunTime:0.067004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 7 ) LIMIT 1   [ RunTime:0.063003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 6 ) LIMIT 1   [ RunTime:0.065004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 5 ) LIMIT 1   [ RunTime:0.064004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 4 ) LIMIT 1   [ RunTime:0.064004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 3 ) LIMIT 1   [ RunTime:0.063003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 2 ) LIMIT 1   [ RunTime:0.063004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 1 ) LIMIT 1   [ RunTime:0.067004s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:1.151066s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.151066s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-12-17T23:25:50+08:00 ] ::1 /wkapi/index.php?m=admin&c=index&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.002000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-12-17T23:25:50+08:00 ] ::1 /wkapi/index.php?m=admin&c=welcome&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-12-17T23:25:53+08:00 ] ::1 /wkapi/index.php?m=admin&c=house&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.063004s ]
+SQL: SELECT * FROM `hd_wk` ORDER BY id desc  [ RunTime:0.063004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hd_wkdetail` [ RunTime:0.062003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 16 ) LIMIT 1   [ RunTime:0.062004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 15 ) LIMIT 1   [ RunTime:0.062003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 14 ) LIMIT 1   [ RunTime:0.062003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 13 ) LIMIT 1   [ RunTime:0.063004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 12 ) LIMIT 1   [ RunTime:0.062003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 11 ) LIMIT 1   [ RunTime:0.062004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 10 ) LIMIT 1   [ RunTime:0.062004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 9 ) LIMIT 1   [ RunTime:0.063003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 8 ) LIMIT 1   [ RunTime:0.063004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 7 ) LIMIT 1   [ RunTime:0.062004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 6 ) LIMIT 1   [ RunTime:0.062003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 5 ) LIMIT 1   [ RunTime:0.062004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 4 ) LIMIT 1   [ RunTime:0.062003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 3 ) LIMIT 1   [ RunTime:0.062004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 2 ) LIMIT 1   [ RunTime:0.063004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 1 ) LIMIT 1   [ RunTime:0.062003s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:1.111063s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.111063s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-12-17T23:25:55+08:00 ] ::1 /wkapi/index.php?m=admin&c=house&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.059004s ]
+SQL: SELECT * FROM `hd_wk` ORDER BY id desc  [ RunTime:0.059003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hd_wkdetail` [ RunTime:0.062004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 16 ) LIMIT 1   [ RunTime:0.059003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 15 ) LIMIT 1   [ RunTime:0.060003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 14 ) LIMIT 1   [ RunTime:0.062003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 13 ) LIMIT 1   [ RunTime:0.059004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 12 ) LIMIT 1   [ RunTime:0.059003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 11 ) LIMIT 1   [ RunTime:0.059003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 10 ) LIMIT 1   [ RunTime:0.058004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 9 ) LIMIT 1   [ RunTime:0.061003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 8 ) LIMIT 1   [ RunTime:0.058003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 7 ) LIMIT 1   [ RunTime:0.059003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 6 ) LIMIT 1   [ RunTime:0.059004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 5 ) LIMIT 1   [ RunTime:0.060003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 4 ) LIMIT 1   [ RunTime:0.058004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 3 ) LIMIT 1   [ RunTime:0.060003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 2 ) LIMIT 1   [ RunTime:0.059004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 1 ) LIMIT 1   [ RunTime:0.063003s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:1.064061s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.064061s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2016-12-17T23:26:03+08:00 ] ::1 /wkapi/index.php?m=admin&c=index&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-12-17T23:26:03+08:00 ] ::1 /wkapi/index.php?m=admin&c=welcome&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-12-17T23:26:07+08:00 ] ::1 /wkapi/index.php?m=admin&c=house&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.057003s ]
+SQL: SELECT * FROM `hd_wk` ORDER BY id desc  [ RunTime:0.058004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hd_wkdetail` [ RunTime:0.056004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 16 ) LIMIT 1   [ RunTime:0.060003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 15 ) LIMIT 1   [ RunTime:0.056003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 14 ) LIMIT 1   [ RunTime:0.057004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 13 ) LIMIT 1   [ RunTime:0.056003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 12 ) LIMIT 1   [ RunTime:0.057003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 11 ) LIMIT 1   [ RunTime:0.058004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 10 ) LIMIT 1   [ RunTime:0.057003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 9 ) LIMIT 1   [ RunTime:0.058003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 8 ) LIMIT 1   [ RunTime:0.057004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 7 ) LIMIT 1   [ RunTime:0.056003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 6 ) LIMIT 1   [ RunTime:0.057003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 5 ) LIMIT 1   [ RunTime:0.057004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 4 ) LIMIT 1   [ RunTime:0.056003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 3 ) LIMIT 1   [ RunTime:0.056003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 2 ) LIMIT 1   [ RunTime:0.058004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 1 ) LIMIT 1   [ RunTime:0.071004s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:1.036059s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.036059s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-12-17T23:27:07+08:00 ] ::1 /wkapi/index.php?m=admin&c=house&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.060003s ]
+SQL: SELECT * FROM `hd_wk` ORDER BY id desc  [ RunTime:0.060004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hd_wkdetail` [ RunTime:0.061004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 16 ) LIMIT 1   [ RunTime:0.071004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 15 ) LIMIT 1   [ RunTime:0.060004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 14 ) LIMIT 1   [ RunTime:0.060003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 13 ) LIMIT 1   [ RunTime:0.060004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 12 ) LIMIT 1   [ RunTime:0.060003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 11 ) LIMIT 1   [ RunTime:0.059003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 10 ) LIMIT 1   [ RunTime:0.061003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 9 ) LIMIT 1   [ RunTime:0.060004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 8 ) LIMIT 1   [ RunTime:0.059003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 7 ) LIMIT 1   [ RunTime:0.060003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 6 ) LIMIT 1   [ RunTime:0.060003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 5 ) LIMIT 1   [ RunTime:0.059003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 4 ) LIMIT 1   [ RunTime:0.060003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 3 ) LIMIT 1   [ RunTime:0.059003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 2 ) LIMIT 1   [ RunTime:0.060004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 1 ) LIMIT 1   [ RunTime:0.060003s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:1.081062s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.082062s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-12-17T23:27:10+08:00 ] ::1 /wkapi/index.php?m=admin&c=house&a=edit&id=12
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.054003s ]
+SQL: SELECT * FROM `hd_wk` WHERE ( `id` = 12 ) LIMIT 1   [ RunTime:0.053003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.030002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.014001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015001s ]
+
+[ 2016-12-17T23:27:11+08:00 ] ::1 /wkapi/index.php?m=admin&c=house&a=edit&id=12
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.061003s ]
+SQL: SELECT * FROM `hd_wk` WHERE ( `id` = 12 ) LIMIT 1   [ RunTime:0.065004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-12-17T23:27:46+08:00 ] ::1 /wkapi/index.php?m=admin&c=house&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.061004s ]
+SQL: SELECT * FROM `hd_wk` ORDER BY id desc  [ RunTime:0.057003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hd_wkdetail` [ RunTime:0.057003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 16 ) LIMIT 1   [ RunTime:0.060004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 15 ) LIMIT 1   [ RunTime:0.057003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 14 ) LIMIT 1   [ RunTime:0.057003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 13 ) LIMIT 1   [ RunTime:0.057003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 12 ) LIMIT 1   [ RunTime:0.061003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 11 ) LIMIT 1   [ RunTime:0.057004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 10 ) LIMIT 1   [ RunTime:0.057003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 9 ) LIMIT 1   [ RunTime:0.057003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 8 ) LIMIT 1   [ RunTime:0.059004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 7 ) LIMIT 1   [ RunTime:0.057003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 6 ) LIMIT 1   [ RunTime:0.057003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 5 ) LIMIT 1   [ RunTime:0.057004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 4 ) LIMIT 1   [ RunTime:0.058003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 3 ) LIMIT 1   [ RunTime:0.059004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 2 ) LIMIT 1   [ RunTime:0.059003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 1 ) LIMIT 1   [ RunTime:0.053003s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:1.032059s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.033059s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-12-17T23:27:48+08:00 ] ::1 /wkapi/index.php?m=admin&c=house&a=edit&id=12
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.064004s ]
+SQL: SELECT * FROM `hd_wk` WHERE ( `id` = 12 ) LIMIT 1   [ RunTime:0.067004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.028001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-12-17T23:27:49+08:00 ] ::1 /wkapi/index.php?m=admin&c=house&a=edit&id=12
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.068004s ]
+SQL: SELECT * FROM `hd_wk` WHERE ( `id` = 12 ) LIMIT 1   [ RunTime:0.067004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.028002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-12-17T23:31:21+08:00 ] ::1 /wkapi/index.php?m=admin&c=house&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.054003s ]
+SQL: SELECT * FROM `hd_wk` ORDER BY id desc  [ RunTime:0.068004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `hd_wkdetail` [ RunTime:0.053003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 16 ) LIMIT 1   [ RunTime:0.053003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 15 ) LIMIT 1   [ RunTime:0.057003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 14 ) LIMIT 1   [ RunTime:0.053003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 13 ) LIMIT 1   [ RunTime:0.053003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 12 ) LIMIT 1   [ RunTime:0.053003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 11 ) LIMIT 1   [ RunTime:0.053003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 10 ) LIMIT 1   [ RunTime:0.053003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 9 ) LIMIT 1   [ RunTime:0.054003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 8 ) LIMIT 1   [ RunTime:0.054003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 7 ) LIMIT 1   [ RunTime:0.053003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 6 ) LIMIT 1   [ RunTime:0.053003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 5 ) LIMIT 1   [ RunTime:0.056003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 4 ) LIMIT 1   [ RunTime:0.053003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 3 ) LIMIT 1   [ RunTime:0.063003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 2 ) LIMIT 1   [ RunTime:0.056004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 1 ) LIMIT 1   [ RunTime:0.053003s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.975056s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.975056s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2016-12-17T23:31:24+08:00 ] ::1 /wkapi/index.php?m=admin&c=house&a=edit&id=12
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.075004s ]
+SQL: SELECT * FROM `hd_wk` WHERE ( `id` = 12 ) LIMIT 1   [ RunTime:0.064004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-12-17T23:32:35+08:00 ] ::1 /wkapi/index.php?m=admin&c=index&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-12-17T23:32:35+08:00 ] ::1 /wkapi/index.php?m=admin&c=welcome&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.010000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011001s ]
+
+[ 2016-12-17T23:32:38+08:00 ] ::1 /wkapi/index.php?m=admin&c=user&a=logs
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_feedback` [ RunTime:0.063004s ]
+SQL: SELECT * FROM `hd_feedback`  [ RunTime:0.064004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-12-17T23:32:39+08:00 ] ::1 /wkapi/index.php?m=admin&c=user&a=logs
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.016001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_feedback` [ RunTime:0.063004s ]
+SQL: SELECT * FROM `hd_feedback`  [ RunTime:0.063004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-12-17T23:32:44+08:00 ] ::1 /wkapi/index.php?m=admin&c=house&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.053003s ]
+SQL: SELECT * FROM `hd_wk` ORDER BY id desc  [ RunTime:0.069003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hd_wkdetail` [ RunTime:0.057004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 16 ) LIMIT 1   [ RunTime:0.053003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 15 ) LIMIT 1   [ RunTime:0.052003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 14 ) LIMIT 1   [ RunTime:0.056003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 13 ) LIMIT 1   [ RunTime:0.061004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 12 ) LIMIT 1   [ RunTime:0.054003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 11 ) LIMIT 1   [ RunTime:0.052003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 10 ) LIMIT 1   [ RunTime:0.052003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 9 ) LIMIT 1   [ RunTime:0.053003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 8 ) LIMIT 1   [ RunTime:0.057003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 7 ) LIMIT 1   [ RunTime:0.053003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 6 ) LIMIT 1   [ RunTime:0.053003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 5 ) LIMIT 1   [ RunTime:0.053003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 4 ) LIMIT 1   [ RunTime:0.055003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 3 ) LIMIT 1   [ RunTime:0.053003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 2 ) LIMIT 1   [ RunTime:0.053003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 1 ) LIMIT 1   [ RunTime:0.053003s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.973055s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.974055s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-12-17T23:32:46+08:00 ] ::1 /wkapi/index.php?m=admin&c=house&a=index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\wkapi\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hd_wk` [ RunTime:0.063004s ]
+SQL: SELECT * FROM `hd_wk` ORDER BY id desc  [ RunTime:0.063004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `hd_wkdetail` [ RunTime:0.063004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 16 ) LIMIT 1   [ RunTime:0.063004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 15 ) LIMIT 1   [ RunTime:0.063003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 14 ) LIMIT 1   [ RunTime:0.063003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 13 ) LIMIT 1   [ RunTime:0.063004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 12 ) LIMIT 1   [ RunTime:0.064004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 11 ) LIMIT 1   [ RunTime:0.063003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 10 ) LIMIT 1   [ RunTime:0.062004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 9 ) LIMIT 1   [ RunTime:0.065004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 8 ) LIMIT 1   [ RunTime:0.063003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 7 ) LIMIT 1   [ RunTime:0.064004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 6 ) LIMIT 1   [ RunTime:0.064004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 5 ) LIMIT 1   [ RunTime:0.064003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 4 ) LIMIT 1   [ RunTime:0.063003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 3 ) LIMIT 1   [ RunTime:0.063004s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 2 ) LIMIT 1   [ RunTime:0.063003s ]
+SQL: SELECT * FROM `hd_wkdetail` WHERE ( `rid` = 1 ) LIMIT 1   [ RunTime:0.063003s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:1.127064s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.127064s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
