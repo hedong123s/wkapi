@@ -49,7 +49,6 @@ class HouseController extends Controller {
 		    $upload->savePath  =     ''; // 设置附件上传（子）目录
 		    // 上传文件 
 		    $info   =   $upload->upload();
-		    var_dump($info);
 		    //exit();
 
 	    	if($info['file-1']){
@@ -65,9 +64,11 @@ class HouseController extends Controller {
 	    		$arr['img4'] = $info['file-4']['savepath'].$info['file-4']['savename'];
 	    	}
 
-    		$re = M("wkdetail")->where(array('rid'=>$id))->save($arr);
+    		$re = M("wkdetail")->where(array('rid'=>$data['id']))->save($arr);
     		if($re){
     			$this->success('更新成功');
+    		}else{
+    			var_dump($re);
     		}
 
 		}

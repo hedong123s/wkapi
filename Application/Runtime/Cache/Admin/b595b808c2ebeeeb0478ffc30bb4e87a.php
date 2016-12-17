@@ -38,7 +38,7 @@
       <dt><i class="icon-user"></i> 用户中心<i class="iconfont menu_dropdown-arrow">&#xf02a9;</i></dt>
       <dd>
         <ul>
-          <li><a _href="<?php echo U('user/logs');?>" href="javascript:;">用户日志</a></li>
+          <li><a _href="index.php?m=admin&c=user&a=logs" href="javascript:;">用户日志</a></li>
         </ul>
       </dd>
     </dl>
@@ -48,7 +48,7 @@
       <dt><i class="icon-cogs"></i> 房屋管理<i class="iconfont menu_dropdown-arrow">&#xf02a9;</i></dt>
       <dd>
         <ul>
-          <li><a _href="<?php echo U('house/index');?>" href="javascript:void(0)">房屋列表</a></li>
+          <li><a _href="index.php?m=admin&c=house&a=index" href="javascript:void(0)">房屋列表</a></li>
         </ul>
       </dd>
     </dl>
@@ -59,7 +59,7 @@
   <div id="Hui-tabNav" class="Hui-tabNav">
     <div class="Hui-tabNav-wp">
       <ul id="min_title_list" class="acrossTab cl">
-        <li class="active"><span title="我的桌面" data-href="<?php echo U('Welcome/index');?>">我的桌面</span><em></em></li>
+        <li class="active"><span title="我的桌面" data-href="index.php?m=admin&c=welcome&a=index">我的桌面</span><em></em></li>
       </ul>
     </div>
     <div class="Hui-tabNav-more btn-group"><a id="js-tabNav-prev" class="btn radius btn-default size-S" href="javascript:;"><i class="icon-step-backward"></i></a><a id="js-tabNav-next" class="btn radius btn-default size-S" href="javascript:;"><i class="icon-step-forward"></i></a></div>
@@ -67,7 +67,7 @@
   <div id="iframe_box" class="Hui-article">
     <div class="show_iframe">
       <div style="display:none" class="loading"></div>
-      <iframe scrolling="yes" frameborder="0" src="<?php echo U('Welcome/index');?>"></iframe>
+      <iframe scrolling="yes" frameborder="0" src="index.php?m=admin&c=welcome&a=index"></iframe>
     </div>
   </div>
 </section>

@@ -12,10 +12,10 @@ class IndexController extends Controller {
     	$name = I('name');
     	$password = I('password');
     	if($name != 'admin' && $password != '123123'){
-    		$this->error('信息错误','./login');
+    		$this->error('信息错误','index.php?m=admin&c=index&a=login');
     	}else{
     		session('admin','1');
-    		$this->success('登录成功','./index');
+    		$this->success('登录成功','index.php?m=admin&c=index&a=index');
     	}
     }
 

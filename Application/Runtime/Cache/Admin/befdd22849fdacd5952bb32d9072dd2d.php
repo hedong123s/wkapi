@@ -27,7 +27,7 @@
 </head>
 <body>
 <div class="pd-20">
-  <form action="<?php echo U('do_add',array('act'=>'edit'));?>" method="post" class="form form-horizontal" id="form-user-add" enctype="multipart/form-data">
+  <form action="index.php?m=admin&c=house&a=do_add&act=edit" method="post" class="form form-horizontal" id="form-user-add" enctype="multipart/form-data">
     <div class="row cl">
       <label class="form-label col-3"><span class="c-red">*</span>名称：</label>
       <div class="formControls col-5">
