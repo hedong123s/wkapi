@@ -86,7 +86,7 @@
           <a href="/wkapi/Public/../uploads/<?php echo ($rs["img4"]); ?>" target="_blank"><img src = '/wkapi/Public/../uploads/<?php echo ($rs["img4"]); ?>' style="width=50px;height:50px;"/></a>
       </td>
 			<td class="f-14 user-manage">
-			<a title="编辑" href="javascript:;" onclick="user_edit('4','600','','编辑','index.php?m=admin&c=house&a=edit&id=<?php echo ($r["id"]); ?>')" class="ml-5" style="text-decoration:none" target="_top"><i class="icon-edit"></i></a>
+			<a title="编辑" href="index.php?m=admin&c=house&a=edit&id=<?php echo ($r["id"]); ?>" onclick="user_edit('4','600','','编辑','index.php?m=admin&c=house&a=edit&id=<?php echo ($r["id"]); ?>')" class="ml-5" style="text-decoration:none" target="_top"><i class="icon-edit"></i></a>
 			<a title="删除" href="javascript:;" onclick="user_del(this,'1')" class="ml-5" style="text-decoration:none"><i class="icon-trash"></i></a></td>
 		  </tr><?php endforeach; endif; else: echo "" ;endif; ?>
     </tbody>
