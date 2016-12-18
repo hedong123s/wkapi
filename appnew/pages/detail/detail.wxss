@@ -1,0 +1,81 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.welcome{
+  margin-left:10px; 
+  margin-bottom: 10px;
+  text-align: left;
+  align-items: left;
+}
+
+.welcome .wk{
+  font-size: 24px;
+  color:#9e9e9c;
+}
+
+.welcome .zxj{
+  font-size: 24px;
+  color:#d74332;
+}
+
+.title{
+  margin:5px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.price{
+  margin:5px;
+}
+
+.price .jg{
+  font-family: Arial, Helvetica, sans-serif;
+  color:red
+}
+
+.keyword{
+  margin: 5px;
+}
+
+.keyword .bq{
+  width:200px;
+  border-radius: 5px;
+  border: 1px solid;
+  color:blueviolet;
+  font-size: 18px;
+  margin-right: 10px; 
+}
+
+.info{
+  margin:5px;
+  color:#aaa;
+  font-size: 16px;
+}
+
+.dizhi{
+  margin: 5px;
+  font-size: 16px;
+}
+
+.mianji{
+  margin: 5px;
+  font-size: 16px;
+}
+
+.huxin{
+  margin: 5px;
+  font-size: 16px;
+}
+
+

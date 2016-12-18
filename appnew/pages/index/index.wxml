@@ -1,0 +1,99 @@
+<!--index.wxml-->
+<view class="container">
+ 
+  <view class="welcome">
+    <text class='wk'>万科·</text>
+    <text class='zxj'>在线家</text>
+  </view>
+  
+  
+  <view class="search">
+    <input class="search-input" bindinput="bindKeyInput" placeholder="请输入小区名或地址" auto-focus/>
+    <button bindtap="setSearch" class="search-commit">搜 索</button>
+  </view>
+
+  <view class='se'>
+    <view class="select">
+      <view class="section">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{picker}}">
+          <view class='area'>{{ area1 }}</view>
+          <view ><image class="se-img" src="/image/se.png" background-size="cover"></image>  </view>
+          <view class="picker">
+              {{picker[index]}}
+          </view>
+        </picker>
+      </view> 
+      
+      <view class="section">
+        <picker bindchange="bindHuxinChange" value="{{index2}}" range="{{huxin}}">
+          <view class="huxin">{{ huxin1 }}</view>
+          <view ><image class="se-img" src="/image/se.png" background-size="cover"></image>  </view>
+          <view class="picker">
+              {{huxin[index2]}}
+          </view>
+        </picker>
+      </view>
+      
+      <view class="section">
+        <picker bindchange="bindMianjiChange" value="{{index3}}" range="{{mianji}}">
+          <view>{{ mianji1 }}</view>
+          <view ><image class="se-img" src="/image/se.png" background-size="cover"></image>  </view>
+          <view class="picker">
+              {{mianji[index3]}}
+          </view>
+        </picker>
+      </view>
+
+      <view class="section">
+        <picker bindchange="bindPriceChange" value="{{index1}}" range="{{price}}">
+          <view>{{ price1 }}</view>
+          <view ><image class="se-img" src="/image/se.png" background-size="cover"></image>  </view>
+          <view class="picker">
+              {{price[index1]}}
+          </view>
+        </picker>
+      </view>
+    </view>
+  
+  </view>
+  
+  
+  <block wx:for="{{resData}}">
+    <navigator url="../detail/detail?id={{item.id}}">
+      <view class="list">
+        <image class="list-img" src="/image/wk.jpg" background-size="cover"></image>    
+        <view  class="list-title"><text>{{item.title}}</text></view>
+        <view  class="list-dizhi"><text>{{item.dizhi}}</text></view>
+        <view  class="list-price">价格约：<text style='color:#d74332;font-size:18px;'>{{item.price}}</text></view>
+        <view  class="list-keyword"><text>{{item.keywords}}</text></view>   
+      </view>    
+    </navigator>
+  </block>
+
+  
+  <!--
+  <view class="list">
+    <image class="list-img" src="/image/test.jpg" background-size="cover"></image>
+    <text class="list-title">深业上城第一期福田....</text>
+    <view class='list-info'>
+      福田cbd
+    </view>
+    <view class='list-info'>
+      两室一厅 55平米
+    </view>
+    
+    <view class='list-money'>
+      <text>360万</text>
+    </view> 
+  </view>
+  -->
+
+  
+
+ 
+  
+
+  
+  
+  <!--<button bindtap="changeName"> Click me! </button>-->
+</view>

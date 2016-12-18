@@ -1,0 +1,129 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.welcome{
+  margin-left:10px; 
+  text-align: left;
+  align-items: left;
+}
+
+.welcome .wk{
+  font-size: 24px;
+  color:#9e9e9c;
+}
+
+.welcome .zxj{
+  font-size: 24px;
+  color:#d74332;
+}
+
+.search{
+  margin-left:0px;
+  margin-top:10px;
+  background: #f2f2f2;
+  height: 60px; 
+}
+
+.search-input{
+  margin-top:10px;
+  margin-left:10px;
+  padding-left:8px;
+  height: 40px;
+  width:60%;
+  background:white;
+  float: left;
+}
+
+.search-commit{
+  margin-top:10px;
+  width: 30%;
+  height:40px;
+  background: #d74332;
+  color:#fff;
+  
+}
+
+.list {
+  height: 110px;
+  margin: 5px;
+  border-top-color: #aaa;
+  border-top-style:  solid;
+  border-top-width:  1px;
+  padding-top: 5px;
+}
+
+.list-img{
+ width: 140px;
+ height: 110px;
+ float: left;
+ margin-right:10px; 
+}
+
+
+.list-title{  
+  margin:5px;
+}
+
+.list-dizhi{
+  font-size: 14px;
+  margin:5px;
+
+  width: 160px; height:24px; overflow:  hidden; white-space: nowrap; -o-text-overflow: ellipsis; text-overflow:  ellipsis; 
+  
+}
+
+.list-price{
+  font-size: 14px;
+  margin:5px;
+}
+
+.list-keyword{
+  font-size:14px;
+  margin-top:15px;
+}
+
+.se{
+  height: 25px;
+  margin-top:10px;
+  font-size: 16px;
+}
+
+.se-img{
+  width: 15px;
+  height: 12px;
+  position: relative;
+  left:50px;
+  top:-20px;
+}
+
+.select{
+  margin-left:10px;
+  margin-top:5px; 
+}
+
+.section{
+  width: 25%;
+ 
+  float: left;
+}
+
+.picker{
+  display: none;
+}
+
+

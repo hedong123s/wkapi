@@ -1,0 +1,79 @@
+.container{
+    padding-top:1px;
+    padding-bottom:0;
+}
+#main{
+    width:100%;
+}
+._img{
+    height:326rpx;
+    width:100%;
+}
+._img .img{
+    height:100%;
+    display:block;
+    width:100%;
+}
+.radio-group{
+   float:left;
+}
+.radio-group label{
+    float:left;
+    height:395rpx;
+    width:370rpx;
+    margin-bottom:10rpx;
+    position:relative;
+}
+.radio-group label checkbox{position:absolute;left:-9999px;top:0;}
+.radio-group .bb ,.radio-group .dd {
+    float:right;
+}
+.radio-group label view{
+    height:115rpx;width:115rpx;margin:52rpx auto 29rpx; 
+    }
+.radio-group label view image{float:left;height:100%;width:100%;}
+
+.radio-group label .house_add {
+    display:block;width:100%;text-align:center; color:#fff;
+    }
+.radio-group label .house_name {
+    display:block;width:100%;text-align:center; color:#fff;
+    }
+.radio-group label .house_add_true {
+    display:block;width:100%;text-align:center; color:#000;
+    }
+.radio-group label .house_name_true {
+    display:block;width:100%;text-align:center; color:#000;
+    }
+
+
+.radio-group .bb ,.radio-group .ee, .radio-group .ii{
+    margin-left:4px;
+    
+}
+.aa{background:#6368cd;}
+.bb{background:#78b6fb;}
+.cc{background:#78b6fb;}
+.dd{background:#fb78d4;}
+
+
+#footer{
+    height:100rpx;
+    width:100%;
+
+}
+#footer text{
+    float:left;
+    height:100%;
+    width:50%;
+    font-size:40rpx;
+    color:#fff;
+    line-height:100rpx;
+    text-align:center;
+}
+#footer .left{
+    background:#acabab;
+}
+#footer .right{
+    background:#ff0000;
+}

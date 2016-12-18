@@ -1,0 +1,70 @@
+<view class="container">
+    <view class="main">
+        <view class="_img">
+            <image class="img" src="/image/choose03.jpg"></image>  
+        </view>
+         <checkbox-group class="radio-group" bindchange="checkboxChange">
+        <label for="{{item.id}}" class="{{item.id}}" wx:for-items="{{items}}" data-index="{{index}}">
+            <block wx:if="{{item.checked}}">
+                <view >
+                    <image src="/image/checked01.png">111</image>
+                </view>
+                <text class="house_add_true">{{item.value}}</text>
+                <text class="house_name_true">{{item.name}}</text>
+                <text class="house_style_true">{{item.style}}</text>
+             </block>
+            <block wx:else>
+                <view >
+                    <image src="/image/unchecked01.png">111</image>
+                </view>
+                <text class="house_add">{{item.value}}</text>
+                <text class="house_name">{{item.name}}</text>
+                 <text class="house_style">{{item.style}}</text>
+             </block>
+           
+            <checkbox class="checkbox" id="{{item.id}}" value="{{item.value}}" checked="{{item.checked}}" disabled="{{item.disabled}}"/>
+        </label>
+         <view class="other">
+            <text class="warn">注：</text>
+            <text class="warn_txt">可多选</text>
+        </view>
+        </checkbox-group>
+    </view>
+    <view id="footer">
+        <text class="right" bindtap="modalShow">确 定</text>
+    </view>
+
+    <block wx:if="{{wrapShow}}">
+        <view class="showModal">
+            <view class="content">
+                <image bindtap="closeModal" class="close_img" src="/image/close.png"></image>  
+                <text class="con_title">根据您的选择 我们给您推荐一下楼盘</text>
+                <block wx:for="{{resData}}">
+                <navigator url="../xiangqing/xiangqing?id={{item.id}}">
+                <view class="con_card">
+                    <image class="card_img" src="/image/card_1.png"></image>
+                    <text class="card_name">{{item.title}}</text>
+                    <text class="_price">均价约:<text class="price_num">{{item.price}}</text></text>
+                    <!--<text class="card_style_1">{{item.keyword}}</text>-->
+                    <!--<text class="card_style_2">{{item.wuye_type}}</text>-->
+                </view>
+                </navigator>
+                </block>
+                <form bindsubmit="formSubmit" bindreset="formReset">  
+                <view class="customer_info">
+                    <text class="info_us">如果推荐的项目都不是很符合你的需要，请填写您的需求并留下您的联系方式</text>
+                    <view class="section1">
+                        <text class="name">姓名:</text>
+                        <input type="text" name="name"/>
+                    </view>
+                    <view class="section2">
+                        <text class="tel">电话:</text>
+                        <input type="text" name="tel"/>
+                    </view>
+                    <button class="btn" bindtap="submitData" formType="submit">确定</button>
+                </view> 
+                </form>  
+            </view>
+        </view>
+    </block>
+</view>

@@ -1,0 +1,32 @@
+<view class="container">
+    <view class="main">
+        <view class="_img">
+            <image class="img" src="/image/choose01.jpg"></image>  
+        </view>
+        <checkbox-group class="radio-group" bindchange="checkboxChange">
+        <label for="{{item.id}}" class="{{item.id}}" wx:for-items="{{items}}">
+            <block wx:if="{{item.checked}}">
+                <view >
+                    <image src="/image/checked01.png">111</image>
+                </view>
+                <text class="house_add_true">{{item.value}}</text>
+                <text class="house_name_true">{{item.name}}</text>
+             </block>
+            <block wx:else>
+                <view >
+                    <image src="/image/unchecked01.png">111</image>
+                </view>
+                <text class="house_add">{{item.value}}</text>
+                <text class="house_name">{{item.name}}</text>
+             </block>
+           
+            <checkbox class="checkbox"  id="{{item.id}}" value="{{item.name}}" checked="{{item.checked}}" disabled="{{item.disabled}}"/>
+           
+        </label>
+        </checkbox-group>
+    </view>
+    <view id="footer">
+        <text class="left">可多选</text>
+        <text class="right" bindtap="nextChoose">精彩继续</text>
+    </view>
+</view>

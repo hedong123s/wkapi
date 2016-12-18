@@ -1,0 +1,280 @@
+.container{
+    padding-top:1px;
+    padding-bottom:0;
+}
+#main{
+    width:100%;
+}
+._img{
+    height:326rpx;
+    width:100%;
+}
+._img .img{
+    height:100%;
+    display:block;
+    width:100%;
+}
+.radio-group{
+   float:left;
+   position:relative;
+}
+.radio-group label{
+    float:left;
+    height:261rpx;
+    width:246rpx;
+    margin-bottom:9rpx;
+    position:relative;
+}
+.radio-group label checkbox{position:absolute;left:-9999px;top:0;}
+.radio-group .cc ,.radio-group .ff ,.radio-group .jj{
+    float:right;
+}
+.radio-group label view{
+    height:75rpx;width:75rpx;margin:35rpx auto 17rpx; 
+    }
+ .radio-group .jj view{display:none;} 
+
+.radio-group label view image{float:left;height:100%;width:100%;}
+
+.radio-group label .house_add {
+    display:block;width:100%;text-align:center; color:#fff;font-size:28rpx;
+    }
+.radio-group label .house_name {
+    display:block;width:100%;text-align:center; color:#fff;font-size:28rpx;
+    }
+
+.radio-group label .house_style {
+    display:block;width:100%;text-align:center; color:#fff;font-size:28rpx;
+    }
+
+.radio-group label .house_add_true {
+    display:block;width:100%;text-align:center; color:#000;font-size:28rpx;
+    }
+.radio-group label .house_name_true {
+    display:block;width:100%;text-align:center; color:#000;font-size:28rpx;
+    }
+.radio-group label .house_style_true {
+    display:block;width:100%;text-align:center; color:#000;font-size:28rpx;
+    }
+
+
+ .radio-group .jj text{font-size:43rpx;}
+ .radio-group .jj .house_add{margin-top:65rpx;}
+.radio-group .bb ,.radio-group .ee, .radio-group .ii{
+    margin-left:4px;
+    
+}
+
+.other{
+    float:right;
+    height:261rpx;
+    width:246rpx;
+    margin-bottom:9rpx;
+    background:#fb8c42;
+    color:#fff;
+    font-size:40rpx;
+}
+.other .warn ,.other .warn_txt{
+    float:left;
+    width:100%;
+    height:40rpx;
+    line-height:40rpx;
+    text-align:center;
+    margin-top:67rpx;
+}
+.other .warn_txt{
+    margin-top:15rpx;
+}
+
+
+.aa{background:#6368cd;}
+.bb{background:#78b6fb;}
+.cc{background:#18a9d8;}
+.dd{background:#a663cd;}
+.ee{background:#fb78d4;}
+.ff{background:#fba978;}
+.hh{background:#73b321;}
+.ii{background:#fb8c42;}
+.radio-group .jj{background:#873b66;}
+
+#footer{
+    height:100rpx;
+    width:100%;
+
+}
+#footer text{
+    float:left;
+    height:100%;
+    width:100%;
+    font-size:46rpx;
+    color:#fff;
+    line-height:100rpx;
+    text-align:center;
+    background:#ff0000;
+}
+
+.showModal{
+    height:100%;
+    width:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    background:rgba(0,0,0,0.8);   
+}
+.showModal .content{
+    height:554rpx;
+    width:96%;
+    border-radius: 10rpx;
+    background:#fff;
+    position:absolute;
+    left:2%;
+    top:28%; 
+}
+.showModal .content .con_title{
+    float:left;
+    height:66rpx;
+    line-height:77rpx;
+    padding-left:30rpx;
+    font-size:38rpx;
+    font-weight:700;
+    color:#6d6b6b;
+}
+.showModal .content .close_img{
+    height:53rpx;
+    width:53rpx;
+    position:absolute;
+    right:13rpx;
+    top:5rpx;
+}
+.showModal .content .con_card{
+  float:left;
+  width:215rpx;
+  height:305rpx;
+  background:#c5c0c0;
+  margin-left:20rpx;
+  margin-top:5rpx;
+  border-radius: 10rpx;
+}
+.showModal .content .con_card .card_img{
+    height:175rpx;
+    width:213rpx;
+    border-radius: 15rpx 15rpx 0 0;
+}
+.showModal .content .con_card .card_name{
+    float:left;
+    height:45rpx;
+    width:100%;
+    text-align:center;
+    line-height:45rpx;
+    font-size:32rpx;
+    font-weight:700;
+}
+.showModal .content .con_card ._price{
+    float:left;
+    height:25rpx;
+    width:100%;
+    line-height:25rpx;
+    font-size:25rpx;
+    text-align:center;
+}
+.showModal .content .con_card ._price .price_num{
+    color:#fb1e09;
+}
+.showModal .content .con_card .card_style_1{
+    float:left;
+    margin-top:10rpx;
+    margin-left:10rpx;
+    height:38rpx;
+    width:90rpx;
+    line-height:38rpx;
+    text-align:center;
+    background:#b9a2e0;
+    font-size:24rpx;
+    color:#fff;
+    border-radius: 4px
+}
+.showModal .content .con_card .card_style_2{
+    float:left;
+    margin-top:10rpx;
+    margin-left:10rpx;
+    height:38rpx;
+    width:67rpx;
+    line-height:38rpx;
+    text-align:center;
+    background:#ef7f81;
+    font-size:24rpx;
+    color:#fff;
+    border-radius: 4px
+}
+.showModal .content .customer_info{
+    float:left;
+    height:150rpx;
+    width:680rpx;
+    background:#dad7d7;
+    margin-left:20rpx;
+    margin-top:22rpx;
+}
+.showModal .content .customer_info .info_us{
+    float:left;
+    margin:10rpx 91rpx 0 30rpx;
+    line-height:32rpx;
+    font-size:28rpx;
+}
+.showModal .content .customer_info .section1{
+    float:left;
+    min-height:28rpx;
+    height:28rpx;
+    width:230rpx;
+    margin-left:30rpx;
+    font-size:25rpx;
+    line-height:28rpx;
+    margin-top:12rpx;
+}   
+
+.showModal .content .customer_info .section1 .name, .section2 .tel{
+    float:left;
+    height:40rpx;
+    width:67rpx;
+    font-size: 28rpx;
+    padding-top:10rpx;
+}
+.showModal .content .customer_info .section1 .tel{
+    float:left;
+}
+.showModal .content .customer_info .section1 input, .section2 input{
+    float:left;
+    background:#fff;
+    height:40rpx;
+    min-height:40rpx;
+    width:162rpx;
+    margin-top:3rpx;
+    font-size: 32rpx;
+}
+
+.showModal .content .customer_info .section2{
+    float:left;
+    min-height:28rpx;
+    height:28rpx;
+    width:230rpx;
+    margin-left:30rpx;
+    font-size:25rpx;
+    line-height:28rpx;
+    margin-top:12rpx;
+} 
+.showModal .content .customer_info .btn{
+    float:left;
+    height:40rpx;
+    width:120rpx;
+    margin:12rpx 0 0 30rpx;
+    background:#ee0606;
+    color:#fff;
+    font-size:32rpx;
+    line-height:40rpx;
+    text-align:center;
+}
+
+
+
+
+
+
