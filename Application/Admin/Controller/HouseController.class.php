@@ -10,6 +10,7 @@ class HouseController extends Controller {
 	}
 
 	public function index(){
+		//echo __ROOT__;
 		$r = M("wk")->order("id desc")->select();
 		//var_dump($r);
 		$this->assign("res",$r);
@@ -45,7 +46,7 @@ class HouseController extends Controller {
 			$upload = new \Think\Upload();// 实例化上传类
 		    $upload->maxSize   =     3145728 ;// 设置附件上传大小
 		    $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
-		    $upload->rootPath  =     '/uploads/'; // 设置附件上传根目录
+		    $upload->rootPath  =     __ROOT__.'/uploads/'; // 设置附件上传根目录
 		    $upload->savePath  =     ''; // 设置附件上传（子）目录
 		    // 上传文件 
 		    $info   =   $upload->upload();
