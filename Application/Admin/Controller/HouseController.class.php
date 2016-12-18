@@ -50,9 +50,9 @@ class HouseController extends Controller {
 		    $upload->savePath  =     ''; // 设置附件上传（子）目录
 		    // 上传文件 
 		    $info   =   $upload->upload();
-		    var_dump($info);
-		    var_dump($upload->getError());
-		    var_dump($upload);
+		    //var_dump($info);
+		    //var_dump($upload->getError());
+		    //var_dump($upload);
 		    //exit();
 
 	    	if($info['file-1']){
