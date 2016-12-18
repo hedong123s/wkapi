@@ -51,7 +51,7 @@ class HouseController extends Controller {
 		    // 上传文件 
 		    $info   =   $upload->upload();
 		    var_dump($info);
-		    var_dump($upload->getErrorMsg());
+		    var_dump($upload->getError());
 		    var_dump($upload);
 		    //exit();
 
