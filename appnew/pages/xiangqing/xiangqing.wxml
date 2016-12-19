@@ -9,16 +9,24 @@
             <text class="house_style">{{ resData.sale_status }}</text>
         </view>
         <view class="house_info2 house_info">
-            <text class="house_card1">{{ resData.keywords[0] }}</text>
-            <text class="house_card2">{{ resData.keywords[1] }}</text>
-            <text class="house_card3">{{ resData.keywords[2] }}</text>
-            <text class="house_card4">{{ resData.keywords[3] }}</text>
+            <block wx:if="{{resData.keywords[0]}}">
+                <text class="house_card1">{{ resData.keywords[0] }}</text>
+            </block>
+            <block wx:if="{{resData.keywords[1]}}">
+                <text class="house_card2">{{ resData.keywords[1] }}</text>
+            </block>
+            <block wx:if="{{resData.keywords[2]}}">
+                <text class="house_card3">{{ resData.keywords[2] }}</text>
+            </block>
+            <block wx:if="{{resData.keywords[3]}}">
+                <text class="house_card4">{{ resData.keywords[3] }}</text>
+            </block>
             <text class="house_warn">*次均价仅供参考，具体一房一价以案场展示为准</text>
         </view>
         <view class="house_info3 house_info">
             <image class="add_img" src="/image/address.png"></image>
             <text class="house_add">楼盘地址：<text class="addres">{{ resData.dizhi }}</text></text>
-            <text class="house_add_btn">一键导航</text>
+            <text class="house_add_btn" bindtap="getLocation">一键导航</text>
         </view>
         <view class="house_info4 house_info">
             <image class="time_img" src="/image/time.png"></image>

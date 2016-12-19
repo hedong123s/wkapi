@@ -268,7 +268,7 @@
     margin:12rpx 0 0 30rpx;
     background:#ee0606;
     color:#fff;
-    font-size:32rpx;
+    font-size:28rpx;
     line-height:40rpx;
     text-align:center;
 }

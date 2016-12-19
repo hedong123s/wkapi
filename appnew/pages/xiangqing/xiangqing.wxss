@@ -127,11 +127,11 @@
 }
 .house_info5{
     height:600px;
-    width: 100%
+    width: 100%;
     border-bottom:0;
 }
 .house_info6{
-    height:700px;
+    height:650px;
 }
 .house_info7{
     height:47rpx;
