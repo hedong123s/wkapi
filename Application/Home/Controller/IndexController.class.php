@@ -104,6 +104,10 @@ class IndexController extends Controller {
 			Log::write($keywords,'keywords');
 			$arr = explode('、',$keywords);
 			$res['keywords'] = $arr;
+			$dizhi = $res['dizhi'];
+			$arr = explode('(',$dizhi);
+			$res['app_dizhi'] = $arr[0];
+
 		}
 		exit(json_encode(array('err'=>0,'msg'=>'查询成功','res'=>$res)));
 	}
