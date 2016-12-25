@@ -89,8 +89,13 @@ class IndexController extends Controller {
 				$arr = explode('、',$keywords);
 				$res[$k]['keywords'] = $arr;
 				$dizhi = $res['dizhi'];
-				$arr = explode('(',$dizhi);
-				$res[$k]['app_dizhi'] = $arr[0];
+				$arr = explode('（',$dizhi);
+				if($arr){
+					$res[$k]['app_dizhi'] = $arr[0];
+				}else{
+					$res[$k]['app_dizhi'] = $dizhi;
+				}
+				
 
 			}
 		}
