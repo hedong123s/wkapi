@@ -59,7 +59,7 @@ Page({
 
             
         }
-         console.log(dataArr);
+        //  console.log(dataArr);
         // console.log(changeData);
         this.setData({
             items : changeData

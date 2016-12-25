@@ -1,60 +1,39 @@
 var app = getApp()
 
 var changeData = null;
-var dataArr = ["不限价格"];
+var dataArr = "不限价格";
 
 Page({
     data : {
         items: [
-        {id: "aa",name: '2万以下', value: '过渡型购房',checked: false,disabled:false},
-        {id: "bb",name: '2万-3万', value: '改善性购房', checked: false ,disabled:false},
-        {id: "cc",name: '3万以上', value: '享受型购房',checked: false ,disabled:false},
-        {id: "dd",name: '不限价格', value: '投资型购房',checked: true ,disabled:false},
+        {id: "aa",name: '1万以下', checked: false},
+        {id: "bb",name: '1万--1.5万', checked: false},
+        {id: "cc",name: '1.5万--2万', checked: false},
+        {id: "dd",name: '2万--2.5万', checked: false},
+        {id: "ee",name: '2.5万--3万', checked: false},
+        {id: "ff",name: '3万--3.5万', checked: false },
+        {id: "hh",name: '3.5万--4万',  checked: false },
+        {id: "ii",name: '4万以上', checked: false },
+        {id: "jj",name: '不限价格', checked: true },
      ],
      chooseData : null
     },
 
-     checkboxChange : function(e){
+     radioChange : function(e){
         var that = this;
         // console.log(e);
         dataArr = e.detail.value;
         changeData = that.data.items;
-       
-        if(dataArr.length == 0){
-            for(var i=0;i<changeData.length;i++){
+            for(var i=0; i<changeData.length; i++){
+            if(changeData[i].name == dataArr){
+                changeData[i].checked = true;
+            } else {
                 changeData[i].checked = false;
             }
-             changeData[3].checked = true; // 都不选时，默认选择最后项
-             dataArr.push(changeData[3].name); // 传入默认选项的数据
-             changeData[3].disabled = true;
-            that.setData({
-            items : changeData
-         })
-        } else {
-            if(dataArr[0] == changeData[3].name){
-                dataArr.splice(0,1);
-                changeData[3].disabled = false;
-            };
-            var length = dataArr.length; // 长度值不随下面改变
-             if(dataArr[length-1] == changeData[3].name){
-                for(var l=0;l<length-1 ; l++){
-                    dataArr.splice(0,1);
-                }
-                changeData[3].disabled = true;
-            }
-             for(var i=0; i<changeData.length; i++){
-             for(var j=0; j<dataArr.length; j++){
-               if(changeData[i].name == dataArr[j]){
-                   changeData[i].checked = true;
-                   break;
-               } else {
-                   changeData[i].checked = false;
-               }
-             }
-         }
         }
-        // console.log(dataArr);
-        // console.log(changeData);
+        
+         console.log(dataArr);
+         //console.log(changeData);
         this.setData({
             items : changeData
         });

@@ -3,7 +3,7 @@
         <view class="_img">
             <image class="img" src="/image/choose03.jpg"></image>  
         </view>
-         <checkbox-group class="radio-group" bindchange="checkboxChange">
+         <radio-group class="radio-group" bindchange="radioChange">
         <label for="{{item.id}}" class="{{item.id}}" wx:for-items="{{items}}" data-index="{{index}}">
             <block wx:if="{{item.checked}}">
                 <view >
@@ -22,13 +22,14 @@
                  <text class="house_style">{{item.style}}</text>
              </block>
            
-            <checkbox class="checkbox" id="{{item.id}}" value="{{item.value}}" checked="{{item.checked}}" disabled="{{item.disabled}}"/>
+            <radio class="radio" id="{{item.id}}" value="{{item.value}}" checked="{{item.checked}}" disabled="{{item.disabled}}"/>
         </label>
          <view class="other">
             <text class="warn">注：</text>
-            <text class="warn_txt">可多选</text>
+            <text class="warn_txt">给出您的</text>
+            <text class="warn_txt">唯一选择</text>
         </view>
-        </checkbox-group>
+        </radio-group>
     </view>
     <view id="footer">
         <text class="right" bindtap="modalShow">确 定</text>
@@ -39,20 +40,22 @@
             <view class="content">
                 <image bindtap="closeModal" class="close_img" src="/image/close.png"></image>  
                 <text class="con_title">根据您的选择 我们给您推荐一下楼盘</text>
+                <view class="con_info">
                 <block wx:for="{{resData}}">
                 <navigator url="../xiangqing/xiangqing?id={{item.id}}">
                 <view class="con_card">
                     <image class="card_img" src="/image/card_1.png"></image>
                     <text class="card_name">{{item.title}}</text>
-                    <text class="_price">均价约:<text class="price_num">{{item.price}}</text></text>
-                    <!--<text class="card_style_1">{{item.keyword}}</text>-->
-                    <!--<text class="card_style_2">{{item.wuye_type}}</text>-->
+                    <text class="_price">均价:约<text class="price_num">{{item.app_price}}</text></text>
+                    <text class="_hprice">户型:{{item.huxin_type}}</text>
+                    <text class="_hprice">地址:{{item.app_dizhi}}</text>
                 </view>
                 </navigator>
                 </block>
+                 </view>
                 <form bindsubmit="formSubmit" bindreset="formReset">  
                 <view class="customer_info">
-                    <text class="info_us">如果推荐的项目都不是很符合你的需要，请填写您的需求并留下您的联系方式</text>
+                    <text class="info_us">如果以上推荐的项目都不符合您的需要，请您留下联系方式，我们会安排 三好顾问和您进行一对一的优质购房及咨询服务。</text>
                     <view class="section1">
                         <text class="name">姓名:</text>
                         <input type="text" name="name"/>
@@ -64,6 +67,18 @@
                     <button class="btn" bindtap="submitData" formType="submit">确定</button>
                 </view> 
                 </form>  
+                <block wx:for="{{managerData}}">
+                <view class="saler">
+                    <image class="saler_img" src="/image/guwen.png"></image>
+                    <view class="saler_info">
+                        <text class="saler_name">{{item.name}}</text>
+                        <text class="saler_per">{{item.zhiwei}}</text>
+                        <text class="saler_txt">{{item.describe}}</text>
+                    </view>
+                   <image class="saler_tel" src="/image/guwen_tel.png"></image>
+                </view>
+                </block>
+               
             </view>
         </view>
     </block>

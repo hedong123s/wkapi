@@ -25,7 +25,7 @@
     margin-bottom:9rpx;
     position:relative;
 }
-.radio-group label checkbox{position:absolute;left:-9999px;top:0;}
+.radio-group label radio{position:absolute;left:-9999px;top:0;}
 .radio-group .cc ,.radio-group .ff ,.radio-group .jj{
     float:right;
 }
@@ -122,16 +122,18 @@
     background:rgba(0,0,0,0.8);   
 }
 .showModal .content{
-    height:554rpx;
+    height:auto;
+    padding-bottom:20rpx;
     width:96%;
     border-radius: 10rpx;
     background:#fff;
     position:absolute;
     left:2%;
-    top:28%; 
+    top:10%; 
 }
 .showModal .content .con_title{
-    float:left;
+    /*float:left;*/
+    margin:0 auto;
     height:66rpx;
     line-height:77rpx;
     padding-left:30rpx;
@@ -146,10 +148,13 @@
     right:13rpx;
     top:5rpx;
 }
+.showModal .content .con_info{
+    height:360rpx;
+}
 .showModal .content .con_card{
   float:left;
   width:215rpx;
-  height:305rpx;
+  height:360rpx;
   background:#c5c0c0;
   margin-left:20rpx;
   margin-top:5rpx;
@@ -171,12 +176,24 @@
 }
 .showModal .content .con_card ._price{
     float:left;
-    height:25rpx;
+    padding-left:2px;
+    height:32rpx;
     width:100%;
-    line-height:25rpx;
+    line-height:32rpx;
     font-size:25rpx;
-    text-align:center;
+    text-align:left;
 }
+
+.showModal .content .con_card ._hprice{
+    float:left;
+    padding-left:2px;
+    height:32rpx;
+    width:100%;
+    line-height:32rpx;
+    font-size:20rpx;
+    text-align:left;
+}
+
 .showModal .content .con_card ._price .price_num{
     color:#fb1e09;
 }
@@ -207,72 +224,120 @@
     border-radius: 4px
 }
 .showModal .content .customer_info{
-    float:left;
-    height:150rpx;
+    /*float:left;*/
+    height:185rpx;
     width:680rpx;
     background:#dad7d7;
-    margin-left:20rpx;
+    margin:0 auto;
     margin-top:22rpx;
+}
+.showModal .content .customer_info:before{
+    content:"";
+    display:block;
+    height:0;
+    width:100%;
+    clear:both;
+    visibility:hidden;
 }
 .showModal .content .customer_info .info_us{
     float:left;
-    margin:10rpx 91rpx 0 30rpx;
-    line-height:32rpx;
-    font-size:28rpx;
+    margin:5rpx 35rpx;
+    line-height:27rpx;
+    font-size:20rpx;
+    text-align:center;
 }
-.showModal .content .customer_info .section1{
+.showModal .content .customer_info .section1 , .showModal .content .customer_info .section2{
     float:left;
-    min-height:28rpx;
-    height:28rpx;
-    width:230rpx;
-    margin-left:30rpx;
+    min-height:47rpx;
+    height:47rpx;
+    width:426rpx;
+    margin-left:80rpx;
     font-size:25rpx;
-    line-height:28rpx;
-    margin-top:12rpx;
+    line-height:47rpx;
 }   
 
 .showModal .content .customer_info .section1 .name, .section2 .tel{
     float:left;
-    height:40rpx;
+    height:47rpx;
+    line-height:47rpx;
     width:67rpx;
     font-size: 28rpx;
-    padding-top:10rpx;
-}
-.showModal .content .customer_info .section1 .tel{
-    float:left;
 }
 .showModal .content .customer_info .section1 input, .section2 input{
     float:left;
     background:#fff;
-    height:40rpx;
-    min-height:40rpx;
-    width:162rpx;
+    height:47rpx;
+    min-height:47rpx;
+    padding-left:20rpx;
+    width:330rpx;
     margin-top:3rpx;
     font-size: 32rpx;
 }
 
 .showModal .content .customer_info .section2{
-    float:left;
-    min-height:28rpx;
-    height:28rpx;
-    width:230rpx;
-    margin-left:30rpx;
-    font-size:25rpx;
-    line-height:28rpx;
-    margin-top:12rpx;
+    margin-top:10rpx;
 } 
 .showModal .content .customer_info .btn{
     float:left;
-    height:40rpx;
-    width:120rpx;
-    margin:12rpx 0 0 30rpx;
+    height:100rpx;
+    margin:10rpx 0 0 30rpx;
     background:#ee0606;
     color:#fff;
-    font-size:28rpx;
-    line-height:40rpx;
+    font-size:35rpx;
+    line-height:100rpx;
     text-align:center;
+    margin-top:-40rpx;
+    border-radius: 20rpx;
 }
+.showModal .content .saler{
+    height:119rpx;
+    width:620rpx;
+    padding:0 30rpx;
+    background:#dad7d7;
+    margin:0 auto;
+    margin-top:3rpx;
+}
+.showModal .content .saler .saler_img{
+    height:96rpx;
+    width:96rpx;
+    float:left;
+    margin-top:12rpx;
+    margin-right:15rpx;
+    }
 
+.showModal .content .saler .saler_info{
+    float:left;
+    height:86rpx;
+    margin-top:20rpx;
+    width:430rpx;
+}
+.showModal .content .saler .saler_name{
+    float:left;
+    height:19rpx;
+    width:100%;
+    line-height:19rpx;
+    font-size:19rpx;
+    margin-bottom:5rpx;
+}
+.showModal .content .saler .saler_per{
+    float:left;
+    width:100%;
+    height:19rpx;
+    line-height:19rpx;
+    font-size:19rpx;
+}
+.showModal .content .saler .saler_txt{
+    float:left;
+    font-size:18rpx;
+    line-height:26rpx;
+    color:#888;
+}
+.showModal .content .saler .saler_tel{
+    float:right;
+    height:67rpx;
+    width:67rpx;
+    margin-top:25rpx;
+}
 
 
 

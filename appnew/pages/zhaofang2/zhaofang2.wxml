@@ -3,7 +3,7 @@
         <view class="_img">
             <image class="img" src="/image/choose02.jpg"></image>  
         </view>
-       <checkbox-group class="radio-group" bindchange="checkboxChange">
+       <radio-group class="radio-group" bindchange="radioChange">
         <label for="{{item.id}}" class="{{item.id}}" wx:for-items="{{items}}">
             <block wx:if="{{item.checked}}">
                 <view >
@@ -20,13 +20,12 @@
                 <text class="house_name">{{item.name}}</text>
              </block>
            
-            <checkbox class="checkbox" id="{{item.id}}" value="{{item.name}}" checked="{{item.checked}}" disabled="{{item.disabled}}"/>
+            <radio class="radio" id="{{item.id}}" value="{{item.name}}" checked="{{item.checked}}" />
            
         </label>
-        </checkbox-group>
+        </radio-group>
     </view>
     <view id="footer">
-        <text class="left">可多选</text>
-        <text class="right" bindtap="nextChoose">精彩继续</text>
+        <text class="right" bindtap="nextChoose">下一步</text>
     </view>
 </view>

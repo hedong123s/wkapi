@@ -1,79 +1,58 @@
 var app = getApp()
 
 var changeData = null;
-var dataArr = ["不限户型"];
+var dataArr = "不限户型";
 
 Page({
     data : {
         items: [
-        {id: "aa",name: '最适合单身狗', value: '单间', style: "自在生活",checked: false ,disabled:false},
-        {id: "bb",name: '适合年轻情侣或', value: '公寓', style: "新婚燕尔你侬我侬",checked: false ,disabled:false},
-        {id: "cc",name: '适合一家的三口', value: '两房',style: "幸福甜蜜",checked: false ,disabled:false},
-        {id: "dd",name: '适合一家的三口', value: '三房',style: "与老人其乐融融",checked: false ,disabled:false},
-        {id: "ee",name: '一家人', value: '四房',style: "各有地盘",checked: false ,disabled:false},
-        {id: "ff",name: '实现子孙满堂', value: '五房',style: "阖家欢乐",checked: false ,disabled:false},
-        {id: "hh",name: '反正很大', value: '别墅',style: "上下好几层",checked: false ,disabled:false},
-        {id: "ii",name: '', value: '不限户型',style: "自在生活",checked: true ,disabled:false}
+        {id: "aa",name: '最适合单身狗', value: '单间', style: "自在生活",checked: false },
+        {id: "bb",name: '适合年轻情侣或', value: '公寓', style: "新婚燕尔你侬我侬",checked: false },
+        {id: "cc",name: '适合一家的三口', value: '两房',style: "幸福甜蜜",checked: false },
+        {id: "dd",name: '适合一家的三口', value: '三房',style: "与老人其乐融融",checked: false },
+        {id: "ee",name: '一家人', value: '四房',style: "各有地盘",checked: false },
+        {id: "ff",name: '实现子孙满堂', value: '五房',style: "阖家欢乐",checked: false },
+        {id: "hh",name: '反正很大', value: '别墅',style: "上下好几层",checked: false },
+        {id: "ii",name: '', value: '不限户型',style: "",checked: true }
      ],
      wrapShow : false,
      address:null,
      price : null,
-     size : null 
+     size : null ,
+     
+    },
+
+    onLoad:function(){
+        getManager(this);
+       wx.setStorage({
+          key: 'size',
+          data: dataArr, 
+        });
     },
     
-      checkboxChange : function(e){
+      radioChange : function(e){
         var that = this;
-        // console.log(e);
         dataArr = e.detail.value;
         changeData = that.data.items;
-        // console.log(dataArr);
-        if(dataArr.length == 0){
-            for(var i=0;i<changeData.length;i++){
+            for(var i=0; i<changeData.length; i++){
+            if(changeData[i].value == dataArr){
+                changeData[i].checked = true;
+            } else {
                 changeData[i].checked = false;
             }
-            changeData[7].checked = true; // 都不选时，默认选择最后项
-            dataArr.push(changeData[7].value); // 传入数据
-            changeData[7].disabled = true;
-            that.setData({
-            items : changeData
-         })
-        } else {
-             if(dataArr[0] == changeData[7].value){
-                dataArr.splice(0,1);
-                changeData[7].disabled = false;
-             };
-
-             var length = dataArr.length; // 长度值不随下面改变
-             if(dataArr[length-1] == changeData[7].value){
-                for(var l=0;l<length-1 ; l++){
-                    dataArr.splice(0,1);
-                }
-                changeData[7].disabled = true;
-            };
-
-             for(var i=0; i<changeData.length; i++){
-             for(var j=0; j<dataArr.length; j++){
-               if(changeData[i].value == dataArr[j]){
-                   changeData[i].checked = true;
-                   break;
-               } else {
-                   changeData[i].checked = false;
-               }
-             }
-         }
         }
-
-       
-        // console.log(dataArr);
-        // console.log(changeData);
+         console.log(dataArr);
+        wx.setStorage({
+          key: 'size',
+          data: dataArr, 
+        });
         this.setData({
             items : changeData
         });
-        
+         
     },
 
     
-
      formSubmit:function(e){
             console.log(e.detail.value.name)
             console.log(e.detail.value.tel)
@@ -119,15 +98,13 @@ Page({
 
     // 选择确认
    modalShow :function(){
-        wx.setStorage({
-          key: 'size',
-          data: dataArr, 
-        });
        var that = this;
         try {
+            var value2 = new Array();
+            var value3 = new Array();
             var value1 = wx.getStorageSync('address');
-            var value2 = wx.getStorageSync('price');
-            var value3 = wx.getStorageSync('size');
+            value2[0] =  wx.getStorageSync('price');
+            value3[0] =  wx.getStorageSync('size');
             if (true) {
                 that.setData({
                     address : value1,
@@ -202,5 +179,27 @@ function request(value,value1,value2,that){
           // complete
         }
     });
- 
   }
+
+  function getManager(that){
+        wx.request({
+            //url: 'http://localhost/52php/api/index.php?a=detail',
+            url: 'https://www.xiutub.com/index.php?a=manager',
+            data: {},
+            method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+            header: {'content-type':'application/x-www-form-urlencoded'}, // 设置请求的 header
+            success: function(res){
+            // success
+            console.log(res.data)
+            that.setData({
+                managerData:res.data.res
+            })
+            },
+            fail: function() {
+            // fail
+            },
+            complete: function() {
+            // complete
+            }
+        })
+    }
