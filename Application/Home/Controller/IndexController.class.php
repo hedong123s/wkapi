@@ -88,6 +88,10 @@ class IndexController extends Controller {
 				$keywords = $v['keyword'];
 				$arr = explode('、',$keywords);
 				$res[$k]['keywords'] = $arr;
+				$dizhi = $res['dizhi'];
+				$arr = explode('(',$dizhi);
+				$res[$k]['app_dizhi'] = $arr[0];
+
 			}
 		}
 		exit(json_encode(array('err'=>0,'msg'=>'查询成功','res'=>$res)));
