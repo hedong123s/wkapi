@@ -89,9 +89,9 @@ class IndexController extends Controller {
 				$arr = explode('、',$keywords);
 				$res[$k]['keywords'] = $arr;
 				$dizhi = $res['dizhi'];
-				$arr = explode('（',$dizhi);
-				if($arr){
-					$res[$k]['app_dizhi'] = $arr[0];
+				$arr1 = explode('（',$dizhi);
+				if($arr1){
+					$res[$k]['app_dizhi'] = $arr1[0];
 				}else{
 					$res[$k]['app_dizhi'] = $dizhi;
 				}
@@ -114,8 +114,8 @@ class IndexController extends Controller {
 			$arr = explode('、',$keywords);
 			$res['keywords'] = $arr;
 			$dizhi = $res['dizhi'];
-			$arr = explode('(',$dizhi);
-			$res['app_dizhi'] = $arr[0];
+			$arr1 = explode('(',$dizhi);
+			$res['app_dizhi'] = $arr1[0];
 
 		}
 		exit(json_encode(array('err'=>0,'msg'=>'查询成功','res'=>$res)));
