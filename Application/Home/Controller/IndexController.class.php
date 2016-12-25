@@ -143,8 +143,11 @@ class IndexController extends Controller {
 		}
 	}
 
-	public function test(){
-		echo 'test';
+	public function manager(){
+		$res = M("wkmanager")->limit(3)->select();
+		if($res){
+			exit(json_encode(array('err'=>0,'msg'=>'查询成功','res'=>$res)));
+		}
 	}
 
 	
