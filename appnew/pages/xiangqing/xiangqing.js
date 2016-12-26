@@ -26,6 +26,20 @@ Page({
               }
           })
       },
+
+       calling:function(e){
+          console.log(e)
+          wx.makePhoneCall({
+
+            phoneNumber: '12345678900', //此号码并非真实电话号码，仅用于测试
+            success:function(){
+                console.log("拨打电话成功！")
+            },
+            fail:function(){
+                console.log("拨打电话失败！")
+            }
+          })
+      },
     
     onLoad: function (options) {
         console.log('onLoad')
@@ -44,6 +58,8 @@ Page({
         })
         var id = this.data.id
         getDeatail(id,this)
+        getManager(this)
+        
         //console.log(r)
 
         
@@ -81,3 +97,26 @@ function getDeatail(id,that){
     }
   })
 }
+
+function getManager(that){
+        wx.request({
+            //url: 'http://localhost/52php/api/index.php?a=detail',
+            url: 'https://www.xiutub.com/index.php?a=manager',
+            data: {},
+            method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+            header: {'content-type':'application/x-www-form-urlencoded'}, // 设置请求的 header
+            success: function(res){
+            // success
+            console.log(res.data)
+            that.setData({
+                managerData:res.data.res
+            })
+            },
+            fail: function() {
+            // fail
+            },
+            complete: function() {
+            // complete
+            }
+        })
+    }

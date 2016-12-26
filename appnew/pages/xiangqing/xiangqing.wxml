@@ -46,27 +46,15 @@
          <view class="house_info7 house_info">
             三好顾问
         </view>
+        <block wx:for="{{managerData}}">
         <view class="house_info8 house_info">
-            <image class="guwen_img" src="/image/guwen.png"></image>
-            <text class="guwen_name">张雅静</text>
-            <text class="guwen_per">资深客户经理</text>
-            <image class="weixin_img" src="/image/guwen_weixin.png"></image>
-            <image class="tel_img" src="/image/guwen_tel.png"></image>
+            <image class="guwen_img" src="https://www.xiutub.com/Uploads/{{item.pic}}"></image>
+            <text class="guwen_name">{{item.name}}</text>
+            <text class="guwen_per">{{item.zhiwei}}</text>
+            
+            <image class="tel_img" src="/image/guwen_tel.png" bindtap="calling"></image>
         </view>
-         <view class="house_info8 house_info9 house_info">
-            <image class="guwen_img" src="/image/guwen.png"></image>
-            <text class="guwen_name">张雅静</text>
-            <text class="guwen_per">资深客户经理</text>
-            <image class="weixin_img" src="/image/guwen_weixin.png"></image>
-            <image class="tel_img" src="/image/guwen_tel.png"></image>
-        </view>
-         <view class="house_info8 house_info10 house_info">
-            <image class="guwen_img" src="/image/guwen.png"></image>
-            <text class="guwen_name">张雅静</text>
-            <text class="guwen_per">资深客户经理</text>
-            <image class="weixin_img" src="/image/guwen_weixin.png"></image>
-            <image class="tel_img" src="/image/guwen_tel.png"></image>
-        </view>
+        </block>
 
 
 

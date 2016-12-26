@@ -69,13 +69,13 @@
                 </form>  
                 <block wx:for="{{managerData}}">
                 <view class="saler">
-                    <image class="saler_img" src="/image/guwen.png"></image>
+                    <image class="saler_img" src="https://www.xiutub.com/Uploads/{{item.pic}}"></image>
                     <view class="saler_info">
                         <text class="saler_name">{{item.name}}</text>
                         <text class="saler_per">{{item.zhiwei}}</text>
                         <text class="saler_txt">{{item.describe}}</text>
                     </view>
-                   <image class="saler_tel" src="/image/guwen_tel.png"></image>
+                    <image class="saler_tel" src="/image/guwen_tel.png" bindtap="calling"></image>
                 </view>
                 </block>
                
