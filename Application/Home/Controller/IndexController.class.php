@@ -32,25 +32,26 @@ class IndexController extends Controller {
 		
 		foreach($map->price as $k=>$v){
 			if($v == '不限价格') {
-				$arr['price_type'] = array('like',"%%");
-				break;
+				//$arr['price_type'] = array('like',"%%");
+				//break;
+				$v=0;
 			}else{
 				if($v == '1万以下'){
 					$v=1;
 				}elseif($v == '1万--1.5万'){
 					$v=2;
 				}elseif($v == '1.5万--2万'){
-					$v=2;
+					$v=3;
 				}elseif($v == '2万--2.5万'){
-					$v=2;
+					$v=4;
 				}elseif($v == '2.5万--3万'){
-					$v=2;
+					$v=5;
 				}elseif($v == '3万--3.5万'){
-					$v=3;
+					$v=6;
 				}elseif($v == '3.5万--4万'){
-					$v=3;
+					$v=7;
 				}elseif($v == '4万以上'){
-					$v=3;
+					$v=8;
 				}
 				$newprice[] = $v;	
 				$arr['price_type'] = array('in',$newprice);
@@ -82,13 +83,13 @@ class IndexController extends Controller {
 		}
 		$res = M("wk")->where($arr)->limit(3)->select();
 		if(count($res) < 3){
-			$arr['huxin_type'] = array('like',"%%");
+			$arr['price_type'] = array('like',"%%");
 			$res = M("wk")->order('rand()')->where($arr)->limit(3)->select();
 			if(count($res) < 3){
-				$arr['price_type'] = array('like',"%%");
+				$arr['area'] = array('like',"%%");
 				$res = M("wk")->order('rand()')->where($arr)->limit(3)->select();
 				if(count($res) < 3){
-					$arr['area'] = array('like',"%%");
+					$arr['huxin_type'] = array('like',"%%");
 					$res = M("wk")->order('rand()')->where($arr)->limit(3)->select();
 				}
 			}
