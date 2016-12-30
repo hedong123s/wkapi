@@ -11,7 +11,7 @@ class IndexController extends Controller {
 		Log::write(1111111111,'mb');
 		$map = I("map",'','');
 		Log::write($map,'info');
-		//$map = '{"area":["南沙区","黄埔区"],"price":["2万以下"],"huxin":["四房","三房","五房"]}';
+		$map = '{"area":["黄埔区"],"price":["4万以上"],"huxin":["不限户型"]}';
 
 		//2万以下   2万-3万   3万以上  不限价格 
 		//单间  公寓   两房  三房  四房  五房  别墅  不限户型
@@ -53,9 +53,9 @@ class IndexController extends Controller {
 				}elseif($v == '4万以上'){
 					$v=8;
 				}
-				$newprice[] = $v;	
-				$arr['price_type'] = array('in',$newprice);
 			}
+			$newprice[] = $v;	
+			$arr['price_type'] = array('in',$newprice);
 		}
 		foreach($map->huxin as $k=>$v){
 			if($v == '不限户型') {
@@ -81,7 +81,47 @@ class IndexController extends Controller {
 				$arr['huxin_type'] = array('like',$newhuxin,'OR');
 			}
 		}
-		$res = M("wk")->where($arr)->limit(3)->select();
+		var_dump($arr);
+		$res = M("wk")->where($arr)->order('rand()')->limit(3)->select();
+		
+		if(count($res) == 3){
+			foreach($res as $k=>$v){
+				$res[$k]['type'] = 1;
+			}
+		}elseif(count($res) == 2){
+			foreach($res as $k=>$v){
+				$res[$k]['type'] = 1;
+			}
+			$arr['price_type'] = array('like',"%%");
+			$arr['area'] = array('like',"%%");
+			$r_tmp = M("wk")->order('rand()')->where($arr)->limit(1)->select();
+			$res[2] = $r_tmp[0];
+			$res[2]['type'] = 0;			
+		}elseif(count($res) == 1){
+			foreach($res as $k=>$v){
+				$res[$k]['type'] = 1;
+			}
+			$arr['price_type'] = array('like',"%%");
+			$arr['area'] = array('like',"%%");
+			$r_tmp = M("wk")->order('rand()')->where($arr)->limit(2)->select();
+			$res[1] = $r_tmp[0];
+			$res[1]['type'] = 0;
+			$res[2] = $r_tmp[1];
+			$res[2]['type'] = 0;
+		}elseif(count($res) == 0){
+			$arr['price_type'] = array('like',"%%");
+			$arr['area'] = array('like',"%%");
+			$arr['huxin_type'] = array('like',"%%");
+			$r_tmp = M("wk")->order('rand()')->where($arr)->limit(3)->select();
+			$res[1] = $r_tmp[0];
+			$res[1]['type'] = 0;
+			$res[2] = $r_tmp[1];
+			$res[2]['type'] = 0;
+			$res[0] = $r_tmp[2];
+			$res[0]['type'] = 0;
+		}
+		var_dump($res);
+		/*
 		if(count($res) < 3){
 			$arr['price_type'] = array('like',"%%");
 			$res = M("wk")->order('rand()')->where($arr)->limit(3)->select();
@@ -93,7 +133,7 @@ class IndexController extends Controller {
 					$res = M("wk")->order('rand()')->where($arr)->limit(3)->select();
 				}
 			}
-		}
+		}*/
 		if(!empty($res)){
 			foreach($res as $k=>$v){
 				$keywords = $v['keyword'];
