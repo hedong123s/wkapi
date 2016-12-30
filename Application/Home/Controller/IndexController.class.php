@@ -11,7 +11,7 @@ class IndexController extends Controller {
 		Log::write(1111111111,'mb');
 		$map = I("map",'','');
 		Log::write($map,'info');
-		$map = '{"area":["黄埔区"],"price":["4万以上"],"huxin":["不限户型"]}';
+		//$map = '{"area":["黄埔区"],"price":["1万--1.5万"],"huxin":["不限户型"]}';
 
 		//2万以下   2万-3万   3万以上  不限价格 
 		//单间  公寓   两房  三房  四房  五房  别墅  不限户型
