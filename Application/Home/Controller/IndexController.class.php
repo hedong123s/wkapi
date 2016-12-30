@@ -81,7 +81,6 @@ class IndexController extends Controller {
 				$arr['huxin_type'] = array('like',$newhuxin,'OR');
 			}
 		}
-		var_dump($arr);
 		$res = M("wk")->where($arr)->order('rand()')->limit(3)->select();
 		
 		if(count($res) == 3){
@@ -120,7 +119,6 @@ class IndexController extends Controller {
 			$res[0] = $r_tmp[2];
 			$res[0]['type'] = 0;
 		}
-		var_dump($res);
 		/*
 		if(count($res) < 3){
 			$arr['price_type'] = array('like',"%%");
