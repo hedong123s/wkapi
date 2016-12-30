@@ -6,7 +6,7 @@ Page({
     data : {
         items: [
         {id: "aa",name: '天河区', value: '城市中心',checked: false ,disabled: false},
-        {id: "bb",name: '黄浦区', value: '科技景绣',checked: false ,disabled: false},
+        {id: "bb",name: '黄埔区', value: '科技景绣',checked: false ,disabled: false},
         {id: "cc",name: '荔湾区', value: '古祠流芳',checked: false ,disabled: false},
         {id: "dd",name: '白云区', value: '云山叠翠',checked: false ,disabled: false},
         {id: "ee",name: '南沙区', value: '湿地唱晚' , checked: false ,disabled: false},

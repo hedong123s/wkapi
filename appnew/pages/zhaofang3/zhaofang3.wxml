@@ -43,7 +43,7 @@
                 <view class="con_info">
                 <block wx:for="{{resData}}">
                 <navigator url="../xiangqing/xiangqing?id={{item.id}}">
-                <view class="con_card">
+                <view class="con_card con_se{{item.type}}">
                     <image class="card_img" src="/image/card_1.png"></image>
                     <text class="card_name">{{item.title}}</text>
                     <text class="_price">均价:约<text class="price_num">{{item.app_price}}</text></text>

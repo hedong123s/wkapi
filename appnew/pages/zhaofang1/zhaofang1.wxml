@@ -27,6 +27,6 @@
     </view>
     <view id="footer">
         <text class="left">可多选</text>
-        <text class="right" bindtap="nextChoose">精彩继续</text>
+        <text class="right" bindtap="nextChoose">下一步</text>
     </view>
 </view>
