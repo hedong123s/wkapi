@@ -19,8 +19,11 @@ class HouseController extends Controller {
 
 	public function edit(){
 		$map['id'] = I('id');
+		$map['rid'] = I('id');
 		$res = M("wk")->where($map)->find();
+		$res1 = M("wkdetail")->where($map)->find();
 		$this->assign("r",$res);
+		$this->assign("r1",$res1);
 		$this->display();
 	}
 
