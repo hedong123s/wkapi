@@ -173,7 +173,7 @@ class IndexController extends Controller {
 	public function feedback(){
 		$name = I('name');
 		$mobile = I('tel');
-		if(mb_strlen($name) > 8 || $name == ''){
+		if(mb_strlen($name) > 12 || $name == ''){
 			exit(json_encode(array('err'=>1,'msg'=>'请输入正确的姓名')));
 		}
 		if(!preg_match("/^1[34578]{1}\d{9}$/",$mobile)){
