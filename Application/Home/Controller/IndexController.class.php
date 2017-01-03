@@ -154,7 +154,7 @@ class IndexController extends Controller {
 
 	public function detail(){
 		$id = I('post.id');
-		$map['id']  = $id;
+		$map['w.id']  = $id;
 		$res = M("wk w")->where($map)->join(C('DB_PREFIX')."wkdetail d on w.id=d.rid")->find();
 		if(!empty($res)){			
 			$keywords = $res['keyword'];
