@@ -38,11 +38,26 @@
             <text class="house_time">最新开盘：<text class="addres">2016年11月29日</text></text>
         </view>
         <view class="house_info5">
-            <image src="https://www.xiutub.com/Public/1.png" style="width:100%;height:100%"></image>
+            <block wx:if="{{resData.img1}}">
+            <image src="https://www.xiutub.com/Uploads/{{resData.img1}}" style="width:100%;height:100%"></image>
+            </block>
         </view>
-         <view class="house_info6">
-            <image src="https://www.xiutub.com/Public/2.png" style="width:100%;height:100%"></image>
+         <view class="house_info5">
+            <block wx:if="{{resData.img2}}">
+            <image src="https://www.xiutub.com/Uploads/{{resData.img2}}" style="width:100%;height:100%"></image>
+            </block>
         </view>
+        <view class="house_info5">
+            <block wx:if="{{resData.img3}}">
+            <image src="https://www.xiutub.com/Uploads/{{resData.img3}}" style="width:100%;height:100%"></image>
+            </block>
+        </view>
+         <view class="house_info5">
+            <block wx:if="{{resData.img4}}">
+            <image src="https://www.xiutub.com/Uploads/{{resData.img4}}" style="width:100%;height:100%"></image>
+            </block>
+        </view>
+        <!--
          <view class="house_info7 house_info">
             三好顾问
         </view>
@@ -55,6 +70,7 @@
             <image class="tel_img" src="/image/guwen_tel.png" bindtap="calling"></image>
         </view>
         </block>
+        -->
 
 
 

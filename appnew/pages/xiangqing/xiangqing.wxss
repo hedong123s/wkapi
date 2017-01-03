@@ -126,13 +126,11 @@
     color:#797979;
 }
 .house_info5{
-    height:600px;
+    height:250px;
     width: 100%;
     border-bottom:0;
 }
-.house_info6{
-    height:650px;
-}
+
 .house_info7{
     height:47rpx;
     padding-left:20rpx;
