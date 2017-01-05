@@ -21,12 +21,12 @@
 .radio-group label{
     float:left;
     height:261rpx;
-    width:246rpx;
+    width:370rpx;
     margin-bottom:9rpx;
     position:relative;
 }
 .radio-group label radio{position:absolute;left:-9999px;top:0;}
-.radio-group .cc ,.radio-group .ff ,.radio-group .jj{
+.radio-group .cc ,.radio-group .ee ,.radio-group .ii{
     float:right;
 }
 .radio-group label view{
@@ -37,7 +37,7 @@
 .radio-group label view image{float:left;height:100%;width:100%;}
 
 .radio-group label .house_add {
-    display:block;width:100%;text-align:center; color:#fff;font-size:28rpx;
+    display:block;width:100%;text-align:center; color:#fff;font-size:42rpx;
     }
 .radio-group label .house_name {
     display:block;width:100%;text-align:center; color:#fff;font-size:28rpx;
@@ -61,7 +61,7 @@
  .radio-group .jj text{font-size:43rpx;}
  .radio-group .jj .house_add{margin-top:65rpx;}
 .radio-group .bb ,.radio-group .ee, .radio-group .ii{
-    margin-left:4px;
+    margin-left:0px;
     
 }
 

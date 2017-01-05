@@ -24,11 +24,7 @@
            
             <radio class="radio" id="{{item.id}}" value="{{item.value}}" checked="{{item.checked}}" disabled="{{item.disabled}}"/>
         </label>
-         <view class="other">
-            <text class="warn">注：</text>
-            <text class="warn_txt">给出您的</text>
-            <text class="warn_txt">唯一选择</text>
-        </view>
+         
         </radio-group>
     </view>
     <view id="footer">

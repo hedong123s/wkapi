@@ -6,14 +6,12 @@ var dataArr = "不限户型";
 Page({
     data : {
         items: [
-        {id: "aa",name: '最适合单身狗', value: '单间', style: "自在生活",checked: false },
-        {id: "bb",name: '适合年轻情侣或', value: '公寓', style: "新婚燕尔你侬我侬",checked: false },
-        {id: "cc",name: '适合一家的三口', value: '两房',style: "幸福甜蜜",checked: false },
-        {id: "dd",name: '适合一家的三口', value: '三房',style: "与老人其乐融融",checked: false },
-        {id: "ee",name: '一家人', value: '四房',style: "各有地盘",checked: false },
-        {id: "ff",name: '实现子孙满堂', value: '五房',style: "阖家欢乐",checked: false },
-        {id: "hh",name: '反正很大', value: '别墅',style: "上下好几层",checked: false },
-        {id: "ii",name: '', value: '不限户型',style: "",checked: true }
+        {id: "bb", value: '公寓',checked: false },
+        {id: "cc", value: '两房',checked: false },
+        {id: "dd", value: '三房',checked: false },
+        {id: "ee", value: '四房',checked: false },
+        {id: "hh", value: '别墅',checked: false },
+        {id: "ii", value: '不限户型',checked: true }
      ],
      wrapShow : false,
      address:null,

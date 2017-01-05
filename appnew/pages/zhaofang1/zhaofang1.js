@@ -5,14 +5,14 @@ var dataArr = ["不重要"];
 Page({
     data : {
         items: [
-        {id: "aa",name: '天河区', value: '城市中心',checked: false ,disabled: false},
-        {id: "bb",name: '黄埔区', value: '科技景绣',checked: false ,disabled: false},
-        {id: "cc",name: '荔湾区', value: '古祠流芳',checked: false ,disabled: false},
-        {id: "dd",name: '白云区', value: '云山叠翠',checked: false ,disabled: false},
-        {id: "ee",name: '南沙区', value: '湿地唱晚' , checked: false ,disabled: false},
-        {id: "ff",name: '海珠区', value: '塔耀新城',checked: false ,disabled: false},
-        {id: "hh",name: '花都区', value: '交通枢纽',checked: false ,disabled: false},
-        {id: "ii",name: '清远市', value: '北江要塞',checked: false ,disabled: false},
+        {id: "aa",name: '天河区', checked: false ,disabled: false},
+        {id: "bb",name: '黄埔区',checked: false ,disabled: false},
+        {id: "cc",name: '荔湾区',checked: false ,disabled: false},
+        {id: "dd",name: '白云区',checked: false ,disabled: false},
+        {id: "ee",name: '南沙区',checked: false ,disabled: false},
+        {id: "ff",name: '海珠区',checked: false ,disabled: false},
+        {id: "hh",name: '花都区',checked: false ,disabled: false},
+        {id: "ii",name: '清远市',checked: false ,disabled: false},
         {id: "jj",name: '不重要', value: '地段',checked: true ,disabled: false}
      ]
     },
