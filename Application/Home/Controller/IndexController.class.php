@@ -192,7 +192,7 @@ class IndexController extends Controller {
 	}
 
 	public function manager(){
-		$res = M("wkmanager")->limit(3)->select();
+		$res = M("wkmanager")->limit(3)->order('rand()')->select();
 		if($res){
 			exit(json_encode(array('err'=>0,'msg'=>'查询成功','res'=>$res)));
 		}
