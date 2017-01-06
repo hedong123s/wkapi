@@ -39,7 +39,7 @@
 -->
   <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l">
   <!--<a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="icon-trash"></i> 批量删除</a>  -->
-  <a href="javascript:;" onclick="user_add('550','','添加用户','index.php?m=admin&c=house&a=add')" class="btn btn-primary radius"><i class="icon-plus"></i> 添加房源</a></span> <span class="r">共有数据：<strong><?php echo count($res); ?></strong> 条</span> </div>
+  <a href="javascript:;" onclick="user_add('550','','添加房源','index.php?m=admin&c=house&a=add')" class="btn btn-primary radius"><i class="icon-plus"></i> 添加房源</a></span> <span class="r">共有数据：<strong><?php echo count($res); ?></strong> 条</span> </div>
   <table class="table table-border table-bordered table-hover table-bg table-sort">
     <thead>
       <tr class="text-c">
@@ -73,10 +73,15 @@
 			<td>{$r.mianji}</td>
 			<td>{$r.dizhi}</td>
 			<td>
-        <if condition="$r['price_type'] == '0'">待定</if>
-        <if condition="$r['price_type'] == '1'">2万以下</if>
-        <if condition="$r['price_type'] == '2'">2万-3万</if>
-        <if condition="$r['price_type'] == '3'">3万以上</if>
+        <if condition="$r['price_type'] == '0'">不限价格</if>
+        <if condition="$r['price_type'] == '1'">1万以下</if>
+        <if condition="$r['price_type'] == '2'">1万--1.5万</if>
+        <if condition="$r['price_type'] == '3'">1.5万--2万</if>
+        <if condition="$r['price_type'] == '4'">2万--2.5万</if>
+        <if condition="$r['price_type'] == '5'">2.5万--3万</if>
+        <if condition="$r['price_type'] == '6'">3万--3.5万</if>
+        <if condition="$r['price_type'] == '7'">3.5万--4万</if>
+        <if condition="$r['price_type'] == '8'">4万以上</if> 
       </td>
       <?php
         $rs = M('wkdetail')->where(array('rid'=>$r['id']))->find();
@@ -90,7 +95,7 @@
       </td>
 			<td class="f-14 user-manage">
 			<a title="编辑" href="javascript:;" onclick="javascript:;user_edit('4','600','','编辑','index.php?m=admin&c=house&a=edit&id={$r.id}')" class="ml-5" style="text-decoration:none"><i class="icon-edit"></i></a>
-			<a title="删除" href="javascript:;" onclick="user_del(this,'1')" class="ml-5" style="text-decoration:none"><i class="icon-trash"></i></a></td>
+			<a title="删除" href="index.php?m=admin&c=house&a=delete&id={$r.id}" class="ml-5" style="text-decoration:none"><i class="icon-trash"></i></a></td>
 		  </tr>
 		</volist>
     </tbody>

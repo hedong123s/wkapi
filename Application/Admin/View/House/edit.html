@@ -68,10 +68,15 @@
     <div class="formControls col-5"> <span class="select-box">
       <select class="select" size="1" name="price_type" datatype="*" nullmsg="请选择所在价格区间！">
         <option value="" selected>请选择地区</option>
-        <option value="0" <if condition="$r['price_type'] == '0'">selected</if>>待定</option>
-        <option value="1" <if condition="$r['price_type'] == '1'">selected</if>>2万以下</option>
-        <option value="2" <if condition="$r['price_type'] == '2'">selected</if>>2万-3万</option>
-        <option value="3" <if condition="$r['price_type'] == '3'">selected</if>>3万以上</option>
+        <option value="0" <if condition="$r['price_type'] == '0'">selected</if>>不限价格</option>
+        <option value="1" <if condition="$r['price_type'] == '1'">selected</if>>1万以下</option>
+        <option value="2" <if condition="$r['price_type'] == '2'">selected</if>>1万--1.5万</option>
+        <option value="3" <if condition="$r['price_type'] == '3'">selected</if>>1.5万--2万</option>
+        <option value="4" <if condition="$r['price_type'] == '4'">selected</if>>2万--2.5万</option>
+        <option value="5" <if condition="$r['price_type'] == '5'">selected</if>>2.5万--3万</option>
+        <option value="6" <if condition="$r['price_type'] == '6'">selected</if>>3万--3.5万</option>
+        <option value="7" <if condition="$r['price_type'] == '7'">selected</if>>3.5万--4万</option>
+        <option value="8" <if condition="$r['price_type'] == '8'">selected</if>>4万以上</option>
       </select>
       </span> </div>
     <div class="col-4"> </div>
