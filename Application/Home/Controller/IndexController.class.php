@@ -81,7 +81,7 @@ class IndexController extends Controller {
 				$arr['huxin_type'] = array('like',$newhuxin,'OR');
 			}
 		}
-		$res = M("wk")->where($arr)->order('rand()')->select();
+		$res = M("wk")->where($arr)->order('rand()')->limit(3)->select();
 		
 		if(count($res) == 3){
 			foreach($res as $k=>$v){
