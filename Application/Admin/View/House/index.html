@@ -45,7 +45,9 @@
       <tr class="text-c">
         <th width="2%">ID</th>
         <th width="5%">名称</th>
+        <th width="5%">缩略图</th>
         <th width="5%">地区</th>
+        <th width="5%">经纬度</th>
         <th width="5%">价格</th>
         <th width="5%">房屋类型</th>
         <th width="5%">销售状态</th>
@@ -64,7 +66,11 @@
 		  <tr class="text-c">
 			<td>{$r.id}</td>
 			<td>{$r.title}</td>
+      <td>
+         <a href="__PUBLIC__/../Uploads/{$rs.pic}" target="_blank"><img src = '__PUBLIC__/../Uploads/{$rs.pic}' style="width=80px;height:80px;"/></a>
+      </td>
 			<td>{$r.area}</td>
+      <td>{$rs.jingdu}|{$rs.weidu}</td>
 			<td>{$r.price}</td>
 			<td>{$r.wuye_type}</td>
 			<td>{$r.sale_status}</td>

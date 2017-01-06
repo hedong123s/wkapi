@@ -39,7 +39,7 @@ class HouseController extends Controller {
 	}
 
 	public function do_add(){
-		if(I('act') == 'edit'){
+		if(I('get.act') == 'edit'){
 			$data['id'] = I('id');
 			$data['title'] = I('title');
 			$data['area'] = I('area');
@@ -77,6 +77,11 @@ class HouseController extends Controller {
 	    	if($info['file-4']){
 	    		$arr['img4'] = $info['file-4']['savepath'].$info['file-4']['savename'];
 	    	}
+	    	if($info['pic']){
+	    		$arr['pic'] = $info['pic']['savepath'].$info['pic']['savename'];
+	    	}
+	    	$arr['jingdu'] = I('jingdu');
+	    	$arr['weidu'] = I('weidu');
 
     		$re = M("wkdetail")->where(array('rid'=>$data['id']))->save($arr);
     		if($re){

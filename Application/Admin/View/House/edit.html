@@ -134,6 +134,30 @@
       </div>
       <div class="col-4"> </div>
     </div>
+
+    <div class="row cl">
+      <label class="form-label col-3"><span class="c-red">*</span>经度：</label>
+      <div class="formControls col-5">
+        <input type="text" class="input-text" value="{$r1.jingdu}" placeholder="" id="user-name" name="jingdu" datatype="*2-36" nullmsg="经度不能为空">
+      </div>
+      <div class="col-4"> </div>
+    </div>
+
+    <div class="row cl">
+      <label class="form-label col-3"><span class="c-red">*</span>纬度：</label>
+      <div class="formControls col-5">
+        <input type="text" class="input-text" value="{$r1.weidu}" placeholder="" id="user-name" name="weidu" datatype="*2-36" nullmsg="纬度不能为空">
+      </div>
+      <div class="col-4"> </div>
+    </div>
+
+    <div class="row cl">
+      <label class="form-label col-3"><span class="c-red">*</span>详情页缩略图</label> 
+      <input type="file"  name="pic" >
+      
+      <div class="col-4"> <if condition="$r1['pic'] != ''"><img src = '__PUBLIC__/../Uploads/{$r1.pic}' style="width=50px;height:50px;"/></if></div>
+       
+    </div>
     
     <div class="row cl">
       <label class="form-label col-3">图片一</label> 
