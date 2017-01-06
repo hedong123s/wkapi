@@ -33,6 +33,13 @@ class IndexController extends Controller {
         $this->display();
     }
 
+    public function delete(){
+        $id = I('id');
+        if(M("wkmanager")->delete($id)){
+            $this->success("删除成功");
+        }
+    }
+
     public function addman(){
         if(I('id') != ''){
             $r = M('wkmanager')->where(array('id'=>I('id')))->find();
