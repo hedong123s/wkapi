@@ -32,9 +32,9 @@ class IndexController extends Controller {
 		
 		foreach($map->price as $k=>$v){
 			if($v == '不限价格') {
-				//$arr['price_type'] = array('like',"%%");
-				//break;
-				$v=0;
+				$arr['price_type'] = array('like',"%%");
+				break;
+				//$v=0;
 			}else{
 				if($v == '1万以下'){
 					$v=1;
@@ -192,7 +192,7 @@ class IndexController extends Controller {
 	}
 
 	public function manager(){
-		$res = M("wkmanager")->limit(3)->order('rand()')->select();
+		$res = M("wkmanager")->order('rand()')->limit(3)->select();
 		if($res){
 			exit(json_encode(array('err'=>0,'msg'=>'查询成功','res'=>$res)));
 		}
