@@ -66,6 +66,9 @@
 		  <tr class="text-c">
 			<td>{$r.id}</td>
 			<td>{$r.title}</td>
+      <?php
+        $rs = M('wkdetail')->where(array('rid'=>$r['id']))->find();
+      ?>
       <td>
          <a href="__PUBLIC__/../Uploads/{$rs.pic}" target="_blank"><img src = '__PUBLIC__/../Uploads/{$rs.pic}' style="width=80px;height:80px;"/></a>
       </td>
@@ -89,9 +92,7 @@
         <if condition="$r['price_type'] == '7'">3.5万--4万</if>
         <if condition="$r['price_type'] == '8'">4万以上</if> 
       </td>
-      <?php
-        $rs = M('wkdetail')->where(array('rid'=>$r['id']))->find();
-      ?>
+      
 			<td>{$r.huxin_type}</td>
       <td>
           <a href="__PUBLIC__/../Uploads/{$rs.img1}" target="_blank"><img src = '__PUBLIC__/../Uploads/{$rs.img1}' style="width=50px;height:50px;"/></a>
