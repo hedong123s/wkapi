@@ -3,6 +3,8 @@
 namespace Home\Controller;
 use Think\Controller;
 use Think\Log;
+use Common\Service\WXBizDataCrypt;
+use Common\Service\Curl;
 class IndexController extends Controller {
     public function index(){
 	    //2万以下   2万-3万   3万以上  不限价格 
@@ -197,6 +199,38 @@ class IndexController extends Controller {
 		if($res){
 			exit(json_encode(array('err'=>0,'msg'=>'查询成功','res'=>$res)));
 		}
+	}
+
+	public function userinfo(){
+		$encryptedData = I('encryptedData');
+		$iv = I('iv');
+		$code = I('code');
+		Log::write($encryptedData,'encryptedData');
+		Log::write($iv,'iv');
+		Log::write($code,'code');
+		$res = Curl::request("get",$url);
+		Log::write($res,'res');
+		$res = json_decode($res);
+		$openid = $res["openid"];
+		$sessionKey = $res["session_key"];
+		//{"session_key":"qu4ZEwI252oxzWS6Jcy42w==","expires_in":2592000,"openid":"oIlP50FguafK7hKPVr5CzFVgSkbQ"}
+		//{"session_key":"buGZFS1wSgGPlSEDcHFV4A==","expires_in":2592000,"openid":"oIlP50FguafK7hKPVr5CzFVgSkbQ"}
+		//AppID(小程序ID):wx9b90ca70047bdc4a
+        //AppSecret(小程序密钥):ec3944510ecc15e6deb4fb5a15d1f44c
+        //code 0035B2L91Z6mfT1AL8L919oWK915B2L5
+		$appid = 'wx9b90ca70047bdc4a';
+		//$sessionKey = 'tiihtNczf5v6AKRyjwEUhQ==';
+		$WXBizDataCrypt = new WXBizDataCrypt($appid, $sessionKey);
+		$errCode = $WXBizDataCrypt->decryptData($encryptedData, $iv, $data );
+
+		if ($errCode == 0) {
+			exit(json_encode(array('err'=>0,'msg'=>'查询成功','res'=>$data)));
+		    //print($data . "\n");
+		} else {
+			exit(json_encode(array('err'=>0,'msg'=>'查询成功','res'=>$errCode)));
+		    //print($errCode . "\n");
+		}
+
 	}
 
 	
