@@ -211,11 +211,12 @@ class IndexController extends Controller {
 		Log::write($iv,'iv');
 		Log::write($code,'code');
 		$url = "https://api.weixin.qq.com/sns/jscode2session?appid=".$appid."&secret=".$secret."&js_code=".$code."&grant_type=authorization_code";
-		$res = Curl::request("get",$url);
-		Log::write($res,'res');
-		$res = json_decode($res);
-		$openid = $res["openid"];
-		$sessionKey = $res["session_key"];
+		$json = Curl::request("get",$url);
+		Log::write($json,'res');
+		//$json = '{"session_key":"PEeyAApK\/rHAaDWZEbLP6w==","expires_in":2592000,"openid":"oIlP50FguafK7hKPVr5CzFVgSkbQ"}';
+		$res = json_decode($json);
+		$openid = $res->openid;
+		$sessionKey = $res->session_key;
 		//{"session_key":"qu4ZEwI252oxzWS6Jcy42w==","expires_in":2592000,"openid":"oIlP50FguafK7hKPVr5CzFVgSkbQ"}
 		//{"session_key":"buGZFS1wSgGPlSEDcHFV4A==","expires_in":2592000,"openid":"oIlP50FguafK7hKPVr5CzFVgSkbQ"}
 		//AppID(小程序ID):wx9b90ca70047bdc4a
