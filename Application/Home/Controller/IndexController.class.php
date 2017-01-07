@@ -213,6 +213,7 @@ class IndexController extends Controller {
 		Log::write($iv,'iv');
 		Log::write($code,'code');
 		Log::write($userInfo,'info');
+		Log::write($id,'id');
 		$url = "https://api.weixin.qq.com/sns/jscode2session?appid=".$appid."&secret=".$secret."&js_code=".$code."&grant_type=authorization_code";
 		$json = Curl::request("get",$url);
 		Log::write($json,'res');
