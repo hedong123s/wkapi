@@ -204,6 +204,7 @@ class IndexController extends Controller {
 	public function userinfo(){
 		$encryptedData = I('encryptedData');
 		$iv = I('iv');
+		$id = I("id");
 		$code = I('code');
 		$userInfo = I("userInfo",'','');
 		$appid = 'wx9b90ca70047bdc4a';
@@ -219,8 +220,11 @@ class IndexController extends Controller {
 		$res = json_decode($json);
 		$openid = $res->openid;
 		if($openid){
+			$title = M("wk")->where(array("id"=>$id))->getField("title");
 			$userinfo = json_decode($userInfo,true);
 			$userinfo["openid"] = $openid;
+			$userinfo["info"] = "浏览".$title;
+			M("wklog")->add($userinfo);
 			exit(json_encode(array('err'=>0,'msg'=>'查询成功','res'=>$userinfo)));
 		}else{
 			exit(json_encode(array('err'=>1,'msg'=>'查询失败','res'=>'code过期')));
