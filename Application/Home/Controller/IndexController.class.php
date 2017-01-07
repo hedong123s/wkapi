@@ -225,6 +225,7 @@ class IndexController extends Controller {
 			$userinfo = json_decode($userInfo,true);
 			$userinfo["openid"] = $openid;
 			$userinfo["info"] = "浏览".$title;
+			$userinfo["time"] = time();
 			M("wklog")->add($userinfo);
 			exit(json_encode(array('err'=>0,'msg'=>'查询成功','res'=>$userinfo)));
 		}else{
