@@ -216,6 +216,11 @@ class IndexController extends Controller {
 		//$json = '{"session_key":"PEeyAApK\/rHAaDWZEbLP6w==","expires_in":2592000,"openid":"oIlP50FguafK7hKPVr5CzFVgSkbQ"}';
 		$res = json_decode($json);
 		$openid = $res->openid;
+		if($openid){
+			exit(json_encode(array('err'=>0,'msg'=>'查询成功','res'=>$openid)));
+		}else{
+			exit(json_encode(array('err'=>1,'msg'=>'查询失败','res'=>'code过期')));
+		}		
 		$sessionKey = $res->session_key;
 		//{"session_key":"qu4ZEwI252oxzWS6Jcy42w==","expires_in":2592000,"openid":"oIlP50FguafK7hKPVr5CzFVgSkbQ"}
 		//{"session_key":"buGZFS1wSgGPlSEDcHFV4A==","expires_in":2592000,"openid":"oIlP50FguafK7hKPVr5CzFVgSkbQ"}
