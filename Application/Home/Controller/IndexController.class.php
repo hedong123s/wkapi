@@ -205,9 +205,12 @@ class IndexController extends Controller {
 		$encryptedData = I('encryptedData');
 		$iv = I('iv');
 		$code = I('code');
+		$appid = 'wx9b90ca70047bdc4a';
+		$secret = 'ec3944510ecc15e6deb4fb5a15d1f44c';
 		Log::write($encryptedData,'encryptedData');
 		Log::write($iv,'iv');
 		Log::write($code,'code');
+		$url = "https://api.weixin.qq.com/sns/jscode2session?appid=".$openid."&secret=".$secret."&js_code=".$code."&grant_type=authorization_code";
 		$res = Curl::request("get",$url);
 		Log::write($res,'res');
 		$res = json_decode($res);
@@ -218,7 +221,7 @@ class IndexController extends Controller {
 		//AppID(小程序ID):wx9b90ca70047bdc4a
         //AppSecret(小程序密钥):ec3944510ecc15e6deb4fb5a15d1f44c
         //code 0035B2L91Z6mfT1AL8L919oWK915B2L5
-		$appid = 'wx9b90ca70047bdc4a';
+		
 		//$sessionKey = 'tiihtNczf5v6AKRyjwEUhQ==';
 		$WXBizDataCrypt = new WXBizDataCrypt($appid, $sessionKey);
 		$errCode = $WXBizDataCrypt->decryptData($encryptedData, $iv, $data );
