@@ -219,7 +219,9 @@ class IndexController extends Controller {
 		$res = json_decode($json);
 		$openid = $res->openid;
 		if($openid){
-			exit(json_encode(array('err'=>0,'msg'=>'查询成功','res'=>$openid)));
+			$userinfo = json_decode($userInfo,true);
+			$userinfo["openid"] = $openid;
+			exit(json_encode(array('err'=>0,'msg'=>'查询成功','res'=>$userinfo)));
 		}else{
 			exit(json_encode(array('err'=>1,'msg'=>'查询失败','res'=>'code过期')));
 		}		
