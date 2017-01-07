@@ -205,7 +205,7 @@ class IndexController extends Controller {
 		$encryptedData = I('encryptedData');
 		$iv = I('iv');
 		$code = I('code');
-		$userInfo = I("userInfo",'','htmlspecialchars');
+		$userInfo = I("userInfo",'','');
 		$appid = 'wx9b90ca70047bdc4a';
 		$secret = 'ec3944510ecc15e6deb4fb5a15d1f44c';
 		Log::write($encryptedData,'encryptedData');
