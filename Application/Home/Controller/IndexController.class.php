@@ -144,7 +144,8 @@ class IndexController extends Controller {
 				}else{
 					$res[$k]['app_dizhi'] = $dizhi;
 				}
-				
+				$pic = M("wkdetail")->where(array("rid"=>$v["id"]))->getField("pic");
+				$res[$k]['pic']	= $pic;
 
 			}
 		}
