@@ -29,7 +29,7 @@ class UserController extends BaseController {
 	 * @return [type] [description]
 	 */
 	public function logs(){
-		$res = M('wklog')->order("id desc")->select();
+		$res = M('wklog')->order("time desc")->select();
 		$this->assign("res",$res);
 		$this->display();
 	}
