@@ -3,7 +3,7 @@
 namespace Admin\Controller;
 use Think\Controller;
 use Think\Log;
-class IndexController extends Controller {
+class IndexController extends BaseController {
     public function login(){
 		$this->display('login');
     }
@@ -11,7 +11,8 @@ class IndexController extends Controller {
     public function dologin(){
     	$name = I('name');
     	$password = I('password');
-    	if($name != 'admin' && $password != '123123'){
+
+    	if($name !== 'admin' || $password !== '123123'){
     		$this->error('信息错误','index.php?m=admin&c=index&a=login');
     	}else{
     		session('admin','1');
@@ -19,21 +20,30 @@ class IndexController extends Controller {
     	}
     }
 
+    public function logout(){
+        session('admin','0');
+        $this->success('已退出登录','index.php?m=admin&c=index&a=login');
+    }
+
 	public function index(){
+        $this->checklogin();
 		$this->display();
 	}
 
 	public function welcome(){
+        $this->checklogin();
 		echo 'welcome';
 	}
 
     public function manager(){
+        $this->checklogin();
         $r = M('wkmanager')->select();
         $this->assign("list",$r);
         $this->display();
     }
 
     public function delete(){
+        $this->checklogin();
         $id = I('id');
         if(M("wkmanager")->delete($id)){
             $this->success("删除成功");
@@ -41,6 +51,7 @@ class IndexController extends Controller {
     }
 
     public function addman(){
+        $this->checklogin();
         if(I('id') != ''){
             $r = M('wkmanager')->where(array('id'=>I('id')))->find();
             $this->assign("r",$r);
@@ -49,6 +60,7 @@ class IndexController extends Controller {
     }
 
     public function do_add(){
+        $this->checklogin();
         $upload = new \Think\Upload();// 实例化上传类
         $upload->maxSize   =     3145728 ;// 设置附件上传大小
         $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型

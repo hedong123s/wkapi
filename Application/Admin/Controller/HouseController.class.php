@@ -4,9 +4,10 @@ namespace Admin\Controller;
 use Think\Controller;
 use Think\Log;
 use Think\Upload;
-class HouseController extends Controller {
+class HouseController extends BaseController {
 	public function __construct(){
 		parent::__construct();
+		$this->checklogin();
 	}
 
 	public function index(){

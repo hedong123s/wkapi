@@ -44,30 +44,19 @@
     <thead>
       <tr class="text-c">
         <th>ID</th>
-        <th>openid</th>
-        <th>昵称</th>
-        <th>性别</th>
-        <th>头像</th>
-        <th>内容</th>     
-        <th>添加时间</th>           
+        <th>姓名</th>
+        <th>电话</th>
+        <th>添加时间</th>    
+
       </tr>
     </thead>
     <tbody>
 		<volist name="res" id="r">
 		  <tr class="text-c">
 			<td>{$r.id}</td>
-			<td>{$r.openid}</td>
-			<td>{$r.nickName}</td>
-      <td>
-          <if condition="$r['gender'] == 0">男<else/>女</if>.
-      </td>			
-      <td>
-         <a href="{$r.avatarUrl}" target="_blank"><img src = '{$r.avatarUrl}' style="width=50px;height:50px;"/></a>
-      </td>
-      <td>{$r.info}</td>
-      <td>{$r.time|date="Y-m-d H:i:s",###}</td>
-		  
-		  </tr>
+			<td>{$r.name}</td>
+			<td>{$r.mobile}</td>
+			<td>{$r.addtime|date="Y-m-d H:i:s",###}</td>
 		</volist>
     </tbody>
   </table>
