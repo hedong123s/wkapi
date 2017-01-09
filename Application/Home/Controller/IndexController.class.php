@@ -96,6 +96,12 @@ class IndexController extends Controller {
 			$arr['price_type'] = array('like',"%%");
 			$arr['huxin_type'] = array('like',"%%");
 			$r_tmp = M("wk")->order('rand()')->where($arr)->limit(1)->select();
+			if(!$r_tmp){
+				$arr['price_type'] = array('like',"%%");
+				$arr['huxin_type'] = array('like',"%%");
+				$arr['area'] = array('like',"%%");
+				$r_tmp = M("wk")->order('rand()')->where($arr)->limit(1)->select();
+			}
 			$res[2] = $r_tmp[0];
 			$res[2]['type'] = 0;			
 		}elseif(count($res) == 1){
@@ -105,6 +111,12 @@ class IndexController extends Controller {
 			$arr['price_type'] = array('like',"%%");
 			$arr['huxin_type'] = array('like',"%%");
 			$r_tmp = M("wk")->order('rand()')->where($arr)->limit(2)->select();
+			if(!$r_tmp){
+				$arr['price_type'] = array('like',"%%");
+				$arr['huxin_type'] = array('like',"%%");
+				$arr['area'] = array('like',"%%");
+				$r_tmp = M("wk")->order('rand()')->where($arr)->limit(2)->select();
+			}
 			$res[1] = $r_tmp[0];
 			$res[1]['type'] = 0;
 			$res[2] = $r_tmp[1];
