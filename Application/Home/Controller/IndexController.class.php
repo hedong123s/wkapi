@@ -111,7 +111,7 @@ class IndexController extends Controller {
 			$arr['price_type'] = array('like',"%%");
 			$arr['huxin_type'] = array('like',"%%");
 			$r_tmp = M("wk")->order('rand()')->where($arr)->limit(2)->select();
-			if(!$r_tmp){
+			if(count($r_tmp)<2){
 				$arr['price_type'] = array('like',"%%");
 				$arr['huxin_type'] = array('like',"%%");
 				$arr['area'] = array('like',"%%");
