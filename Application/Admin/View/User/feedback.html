@@ -46,6 +46,7 @@
         <th>ID</th>
         <th>姓名</th>
         <th>电话</th>
+        <th>选择</th>
         <th>添加时间</th>    
 
       </tr>
@@ -56,6 +57,7 @@
 			<td>{$r.id}</td>
 			<td>{$r.name}</td>
 			<td>{$r.mobile}</td>
+      <td>{$r.remark}</td>
 			<td>{$r.addtime|date="Y-m-d H:i:s",###}</td>
 		</volist>
     </tbody>
