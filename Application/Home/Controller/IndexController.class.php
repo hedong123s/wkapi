@@ -218,6 +218,7 @@ class IndexController extends Controller {
 		$iv = I('iv');
 		$id = I("id");
 		$code = I('code');
+		$infos = I('infos');
 		$userInfo = I("userInfo",'','');
 		$appid = 'wx9b90ca70047bdc4a';
 		$secret = 'ec3944510ecc15e6deb4fb5a15d1f44c';
@@ -236,7 +237,8 @@ class IndexController extends Controller {
 			$title = M("wk")->where(array("id"=>$id))->getField("title");
 			$userinfo = json_decode($userInfo,true);
 			$userinfo["openid"] = $openid;
-			$userinfo["info"] = "浏览".$title;
+			$userinfo["info"] = $title;
+			$userinfo["select"] = $infos;
 			$userinfo["time"] = time();
 			M("wklog")->add($userinfo);
 			exit(json_encode(array('err'=>0,'msg'=>'查询成功','res'=>$userinfo)));
