@@ -1,7 +1,7 @@
 var app = getApp()
 
 var changeData = null;
-var dataArr = "不限户型";
+var dataArr = null;
 
 Page({
     data : {
@@ -11,7 +11,7 @@ Page({
         {id: "dd", value: '三房',checked: false },
         {id: "ee", value: '四房',checked: false },
         {id: "hh", value: '别墅',checked: false },
-        {id: "ii", value: '不限户型',checked: true }
+        {id: "ii", value: '不限户型',checked: false }
      ],
      wrapShow : false,
      address:null,
@@ -40,21 +40,30 @@ Page({
             }
         }
          console.log(dataArr);
-        wx.setStorage({
-          key: 'size',
-          data: dataArr, 
-        });
-        this.setData({
-            items : changeData
-        });
+        if(dataArr == null){
+            wx.showToast({
+                title:'请选择户型',
+                icon: 'fail',
+                duration: 2000
+            })
+        }else{
+            wx.setStorage({
+            key: 'size',
+            data: dataArr, 
+            });
+            this.setData({
+                items : changeData
+            });
+        }   
          
     },
 
     calling:function(e){
-        console.log(e)
+        console.log(e.target.dataset)
+        var d = e.target.dataset.mobile
         wx.makePhoneCall({
 
-        phoneNumber: '12345678900', //此号码并非真实电话号码，仅用于测试
+        phoneNumber: d, //此号码并非真实电话号码，仅用于测试
         success:function(){
             console.log("拨打电话成功！")
         },
@@ -64,10 +73,21 @@ Page({
         })
     },
 
+    onShareAppMessage: function () {
+        return {
+            title: '同享好房',
+            desc: '广州万科智能找房软件，轻松帮您推荐心水好房！更有万科三好顾问为您提供全方位购房咨询服务！',
+            path: 'pages/zhaofang1/zhaofang1'
+        }
+    },
+
+    
     
      formSubmit:function(e){
+            var that =this
             console.log(e.detail.value.name)
             console.log(e.detail.value.tel)
+            var infos = that.data.infos
             var name= e.detail.value.name
             var tel = e.detail.value.tel
             if(name == '' || tel == ''){
@@ -78,11 +98,13 @@ Page({
                 })
             }else{
                 wx.request({
+                    
                     //url: 'http://localhost/52php/api/index.php?a=feedback', //仅为示例，并非真实的接口地址
                      url: 'https://www.xiutub.com/index.php?a=feedback',
                     data: {
                         'name': name,
-                        'tel': tel
+                        'tel': tel,
+                        'infos':infos
                     },
                     method: 'POST',
                     header: {'content-type':'application/x-www-form-urlencoded'}, // 设置请求的 header
@@ -111,7 +133,22 @@ Page({
     // 选择确认
    modalShow :function(){
        var that = this;
-        try {
+      if(
+            that.data.items[0].checked == false &&
+            that.data.items[1].checked == false &&
+            that.data.items[2].checked == false &&
+            that.data.items[3].checked == false &&
+            that.data.items[4].checked == false &&
+            that.data.items[5].checked == false ||
+            dataArr == null
+        ){
+            wx.showToast({
+                title:'请选择户型',
+                icon: 'fail',
+                duration: 2000
+            })
+        }else{
+            try {
             var value2 = new Array();
             var value3 = new Array();
             var value1 = wx.getStorageSync('address');
@@ -121,7 +158,8 @@ Page({
                 that.setData({
                     address : value1,
                     price : value2,
-                    size : value3
+                    size : value3,
+                    infos:wx.getStorageSync('address') + '|' + wx.getStorageSync('price') + '|' + wx.getStorageSync('size')
                 })
              }
             } catch (e) {
@@ -134,11 +172,14 @@ Page({
             var price = that.data.price;
             var huxin = that.data.size;
             request(area,price,huxin,this);
+            
 
             // 显示弹窗
             that.setData({
                 wrapShow : true
             })
+        }
+        
    },
    
     // 关闭弹窗
@@ -148,6 +189,34 @@ Page({
         })
     }
 })
+
+function getUserinfo(encryptedData,iv,code,userInfo,id,that){
+  userInfo = JSON.stringify(userInfo)
+  wx.request({     
+    //url: 'http://localhost/wkapi/index.php?a=userinfo',
+    url: 'https://www.xiutub.com/index.php?a=userinfo',
+    data: {
+        'encryptedData':encryptedData,
+        'iv':iv,
+        'userInfo':userInfo,
+        'code':code,
+        'id':id
+        },
+    method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+    header: {'content-type':'application/x-www-form-urlencoded'}, // 设置请求的 header
+    success: function(res){
+      // success
+      console.log(res.data)
+     
+    },
+    fail: function() {
+      // fail
+    },
+    complete: function() {
+      // complete
+    }
+  })
+}
 
 function request(value,value1,value2,that){
   var str = "";

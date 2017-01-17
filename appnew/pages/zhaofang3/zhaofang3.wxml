@@ -35,12 +35,12 @@
         <view class="showModal">
             <view class="content">
                 <image bindtap="closeModal" class="close_img" src="/image/close.png"></image>  
-                <text class="con_title">根据您的选择 我们给您推荐一下楼盘</text>
+                <text class="con_title">根据您的选择 我们给您推荐以下楼盘</text>
                 <view class="con_info">
                 <block wx:for="{{resData}}">
                 <navigator url="../xiangqing/xiangqing?id={{item.id}}">
                 <view class="con_card con_se{{item.type}}">
-                    <image class="card_img" src="/image/card_1.png"></image>
+                    <image class="card_img" src="https://www.xiutub.com/Uploads/{{item.pic}}"></image>
                     <text class="card_name">{{item.title}}</text>
                     <text class="_price">均价:约<text class="price_num">{{item.app_price}}</text></text>
                     <text class="_hprice">户型:{{item.huxin_type}}</text>
@@ -71,7 +71,7 @@
                         <text class="saler_per">{{item.zhiwei}}</text>
                         <text class="saler_txt">{{item.describe}}</text>
                     </view>
-                    <image class="saler_tel" src="/image/guwen_tel.png" bindtap="calling"></image>
+                    <image class="saler_tel" data-mobile="{{item.mobile}}" src="/image/guwen_tel.png" bindtap="calling"></image>
                 </view>
                 </block>
                

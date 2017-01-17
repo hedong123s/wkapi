@@ -29,7 +29,7 @@
     float:right;
 }
 .radio-group label view{
-    height:75rpx;width:75rpx;margin:35rpx auto 17rpx; 
+    height:75rpx;width:75rpx;margin:45rpx auto 17rpx; 
     }
 .radio-group label view image{float:left;height:100%;width:100%;}
 

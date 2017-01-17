@@ -1,7 +1,7 @@
 var app = getApp()
 
 var changeData = null;
-var dataArr = "不限价格";
+var dataArr = null;
 
 Page({
     data : {
@@ -14,9 +14,17 @@ Page({
         {id: "ff",name: '3万--3.5万', checked: false },
         {id: "hh",name: '3.5万--4万',  checked: false },
         {id: "ii",name: '4万以上', checked: false },
-        {id: "jj",name: '不限价格', checked: true },
+        {id: "jj",name: '不限价格', checked: false },
      ],
      chooseData : null
+    },
+
+    onShareAppMessage: function () {
+        return {
+            title: '同享好房',
+            desc: '广州万科智能找房软件，轻松帮您推荐心水好房！更有万科三好顾问为您提供全方位购房咨询服务！',
+            path: 'pages/zhaofang1/zhaofang1'
+        }
     },
 
      radioChange : function(e){
@@ -33,7 +41,9 @@ Page({
         }
         
          console.log(dataArr);
-         //console.log(changeData);
+
+         
+         console.log(changeData);
         this.setData({
             items : changeData
         });
@@ -42,14 +52,34 @@ Page({
 
 // 精彩继续...
     nextChoose : function(){
-    
-// 储存数据
-       wx.setStorage({
-          key: 'price',
-          data: dataArr 
+        console.log(dataArr)
+        changeData = this.data.items;
+        if(
+            this.data.items[0].checked == false &&
+            this.data.items[1].checked == false &&
+            this.data.items[2].checked == false &&
+            this.data.items[3].checked == false &&
+            this.data.items[4].checked == false &&
+            this.data.items[5].checked == false &&
+            this.data.items[6].checked == false &&
+            this.data.items[7].checked == false &&
+            this.data.items[8].checked == false ||
+            dataArr == null
+        ){
+            wx.showToast({
+                title:'请选择价格',
+                icon: 'fail',
+                duration: 2000
+            })
+        }else{
+            // 储存数据
+        wx.setStorage({
+            key: 'price',
+            data: dataArr 
+            })
+            wx.navigateTo({
+        url: '../zhaofang3/zhaofang3'
         })
-        wx.navigateTo({
-      url: '../zhaofang3/zhaofang3'
-    })
-    }
+        }
+    }   
 })

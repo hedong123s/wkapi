@@ -1,7 +1,7 @@
 
 var app = getApp()
 var changeData = null;
-var dataArr = ["不重要"];
+var dataArr = null;
 Page({
     data : {
         items: [
@@ -13,9 +13,11 @@ Page({
         {id: "ff",name: '海珠区',checked: false ,disabled: false},
         {id: "hh",name: '花都区',checked: false ,disabled: false},
         {id: "ii",name: '清远市',checked: false ,disabled: false},
-        {id: "jj",name: '不重要', value: '地段',checked: true ,disabled: false}
+        {id: "jj",name: '不重要', value: '地段',checked: false ,disabled: false}
      ]
     },
+
+    
 
      checkboxChange : function(e){
         var that = this;
@@ -66,14 +68,38 @@ Page({
         });
     },
     nextChoose : function(){
-        wx.setStorage({
-          key: 'address',
-          data: dataArr 
-        });
+        console.log(dataArr)
+        if(dataArr == null){
+            wx.showToast({
+                title:'请至少选择一个地区',
+                icon: 'fail',
+                duration: 2000
+            })
+        }else{
+            wx.setStorage({
+                key: 'address',
+                data: dataArr 
+            });
+                
+            wx.navigateTo({
+                url: '../zhaofang2/zhaofang2'
+            })
+        }
         
-        wx.navigateTo({
-            url: '../zhaofang2/zhaofang2'
-        })
+    },
+
+    onShareAppMessage: function () {
+        return {
+            title: '同享好房',
+            desc: '广州万科智能找房软件，轻松帮您推荐心水好房！更有万科三好顾问为您提供全方位购房咨询服务！',
+            path: 'pages/zhaofang1/zhaofang1'
+        }
     }
+
+    
 })
+
+
+
+
 

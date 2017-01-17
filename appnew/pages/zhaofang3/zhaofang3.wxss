@@ -40,21 +40,21 @@
     display:block;width:100%;text-align:center; color:#fff;font-size:42rpx;
     }
 .radio-group label .house_name {
-    display:block;width:100%;text-align:center; color:#fff;font-size:28rpx;
+    display:block;width:100%;text-align:center; color:#fff;font-size:42rpx;
     }
 
 .radio-group label .house_style {
-    display:block;width:100%;text-align:center; color:#fff;font-size:28rpx;
+    display:block;width:100%;text-align:center; color:#fff;font-size:42rpx;
     }
 
 .radio-group label .house_add_true {
-    display:block;width:100%;text-align:center; color:#000;font-size:28rpx;
+    display:block;width:100%;text-align:center; color:#000;font-size:42rpx;
     }
 .radio-group label .house_name_true {
-    display:block;width:100%;text-align:center; color:#000;font-size:28rpx;
+    display:block;width:100%;text-align:center; color:#000;font-size:42rpx;
     }
 .radio-group label .house_style_true {
-    display:block;width:100%;text-align:center; color:#000;font-size:28rpx;
+    display:block;width:100%;text-align:center; color:#000;font-size:42rpx;
     }
 
 
@@ -153,10 +153,10 @@
 }
 .showModal .content .con_card{
   float:left;
-  width:210rpx;
+  width:212rpx;
   height:360rpx;
   background:#c5c0c0;
-  margin-left:20rpx;
+  margin-left:15rpx;
   margin-top:5rpx;
   border-radius: 10rpx;
 }
@@ -171,16 +171,16 @@
     width:100%;
     text-align:center;
     line-height:45rpx;
-    font-size:32rpx;
+    font-size:28rpx;
     font-weight:700;
 }
 .showModal .content .con_card ._price{
     float:left;
     padding-left:2px;
-    height:32rpx;
+    height:26rpx;
     width:100%;
-    line-height:32rpx;
-    font-size:25rpx;
+    line-height:26rpx;
+    font-size:20rpx;
     text-align:left;
 }
 

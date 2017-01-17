@@ -3,16 +3,12 @@
     "pages/zhaofang1/zhaofang1",
     "pages/zhaofang2/zhaofang2",
     "pages/zhaofang3/zhaofang3",
-     "pages/xiangqing/xiangqing",
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/user/user",
-    "pages/detail/detail"
+    "pages/xiangqing/xiangqing"
   ],
   "window":{
     "navigationBarBackgroundColor": "#ee0606",
     "navigationBarTextStyle": "write",
-    "navigationBarTitleText": "同享万科房",
+    "navigationBarTitleText": "同享好房",
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light"
   },

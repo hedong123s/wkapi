@@ -1,10 +1,12 @@
 //app.js
+var hotapp = require('utils/hotapp.js');
 App({
   onLaunch: function () {
     //调用API从本地缓存中获取数据
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
+    hotapp.init("hotapp75160245")
   },
   getUserInfo:function(cb){
     var that = this
@@ -13,7 +15,12 @@ App({
     }else{
       //调用登录接口
       wx.login({
-        success: function () {
+        success: function (e) {
+           wx.setStorage({
+            key: 'code',
+            data: e.code 
+          });
+          that.globalData.code = e.code
           wx.getUserInfo({
             success: function (res) {
               that.globalData.userInfo = res.userInfo
@@ -26,6 +33,10 @@ App({
   },
   globalData:{
     userInfo:null,
-    chooseData:null
+    chooseData:null,
+    code:null
   }
+
+  
 })
+

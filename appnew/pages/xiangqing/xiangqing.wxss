@@ -126,7 +126,7 @@
     color:#797979;
 }
 .house_info5{
-    height:250px;
+    height:1300px;
     width: 100%;
     border-bottom:0;
 }
