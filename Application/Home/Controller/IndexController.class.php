@@ -187,6 +187,7 @@ class IndexController extends Controller {
 	public function feedback(){
 		$name = I('name');
 		$mobile = I('tel');
+		$infos = I('infos');
 		if(mb_strlen($name) > 12 || $name == ''){
 			exit(json_encode(array('err'=>1,'msg'=>'请输入正确的姓名')));
 		}
@@ -200,6 +201,7 @@ class IndexController extends Controller {
 		$data['name'] = $name;
 		$data['mobile'] = $mobile;
 		$data['addtime'] = time();
+		$data['remark'] = $infos;
 		$r = M("feedback")->add($data);
 		if($r){
 			exit(json_encode(array('err'=>0,'msg'=>'信息已录入','res'=>$r)));
@@ -218,6 +220,7 @@ class IndexController extends Controller {
 		$iv = I('iv');
 		$id = I("id");
 		$code = I('code');
+		$infos = I('infos');
 		$userInfo = I("userInfo",'','');
 		$appid = 'wx9b90ca70047bdc4a';
 		$secret = 'ec3944510ecc15e6deb4fb5a15d1f44c';
@@ -236,7 +239,8 @@ class IndexController extends Controller {
 			$title = M("wk")->where(array("id"=>$id))->getField("title");
 			$userinfo = json_decode($userInfo,true);
 			$userinfo["openid"] = $openid;
-			$userinfo["info"] = "浏览".$title;
+			$userinfo["info"] = $title;
+			$userinfo["select"] = $infos;
 			$userinfo["time"] = time();
 			M("wklog")->add($userinfo);
 			exit(json_encode(array('err'=>0,'msg'=>'查询成功','res'=>$userinfo)));
