@@ -6,11 +6,12 @@ use Think\Log;
 use Common\Service\Curl;
 class CreatecodeController extends Controller {
     public function index(){
-    	$access_token = 'kRIpA-lyzV9yJtpKouWDmK3_BY4qnJmNx21E4YUYCtuHBdd5OxYOx3kpB6l2a_ihg05uNqVg8f0MGDX6gJN4iygbs8mUZWO1Lxw9tu2OqQVBXB0uktpN6DyFRD22B2uCFCYhADAAXT';
+    	$access_token = 'ovsS6xZP4LBr-E062faWoi7uj5z6-QqyDT4p5rfNna_VELLeJveFfHOwV-2w9-ccsd5kDzs3lPzUkw2tIob6_A8zB3LIpuI1nIzBCvhQv1w1_irpp-q-wmkNCBGxa9cjTFRaAEAEQC';
     	$url = "https://api.weixin.qq.com/cgi-bin/wxaapp/createwxaqrcode?access_token=".$access_token;
-    	$data['path'] = 'pages/zhaofang1/zhaofang1?no=6';
-    	$data['width'] = '430'; 
+    	$data['path'] = I("path");
+    	$data['width'] = i("width"); 
     	$res = Curl::request('POST', $url, $data);
     	var_dump($res);
+    	exit(json_encode(array('err'=>0,'msg'=>$res)));
     }
 }
