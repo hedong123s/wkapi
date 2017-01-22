@@ -188,6 +188,7 @@ class IndexController extends Controller {
 		$name = I('name');
 		$mobile = I('tel');
 		$infos = I('infos');
+		$appcode = I("appcode");
 		if(mb_strlen($name) > 12 || $name == ''){
 			exit(json_encode(array('err'=>1,'msg'=>'请输入正确的姓名')));
 		}
@@ -200,6 +201,7 @@ class IndexController extends Controller {
 
 		$data['name'] = $name;
 		$data['mobile'] = $mobile;
+		$data['code'] = $appcode;
 		$data['addtime'] = time();
 		$data['remark'] = $infos;
 		$r = M("feedback")->add($data);
@@ -221,6 +223,7 @@ class IndexController extends Controller {
 		$id = I("id");
 		$code = I('code');
 		$infos = I('infos');
+		$appcode = I("appcode");
 		$userInfo = I("userInfo",'','');
 		$appid = 'wx9b90ca70047bdc4a';
 		$secret = 'ae0d33de64f09256479a80a9d4c124db'; //ec3944510ecc15e6deb4fb5a15d1f44c
@@ -242,6 +245,7 @@ class IndexController extends Controller {
 			$userinfo["info"] = $title;
 			$userinfo["select"] = $infos;
 			$userinfo["time"] = time();
+			$userinfo["appcode"] = $appcode;
 			M("wklog")->add($userinfo);
 			exit(json_encode(array('err'=>0,'msg'=>'查询成功','res'=>$userinfo)));
 		}else{
