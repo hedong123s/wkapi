@@ -83,5 +83,55 @@ class UserController extends BaseController {
 		header("Pragma: no-cache"); 
 		$xlsWriter->save( "php://output" );
 	}
+
+	/**
+	 * 导出留言
+	 */
+	public function exportlog(){
+
+		Vendor('PHPExcel.PHPExcel');
+		$objExcel=new \PHPExcel();  //创建一个excel
+
+		
+		//设置导出内容
+		$objExcel->getActiveSheet()->setCellValue('A1', 'ID'); 
+		$objExcel->getActiveSheet()->setCellValue('B1', '姓名'); 
+		$objExcel->getActiveSheet()->setCellValue('C1', '电话');
+		$objExcel->getActiveSheet()->setCellValue('D1', '来源');
+		$objExcel->getActiveSheet()->setCellValue('E1', '地区');
+		$objExcel->getActiveSheet()->setCellValue('F1', '价格');
+		$objExcel->getActiveSheet()->setCellValue('G1', '户型');
+		$objExcel->getActiveSheet()->setCellValue('H1','添加时间');
+
+		$res = M('feedback')->order("addtime desc")->select();
+		
+		$i=2;
+		foreach($res as $val){
+			$arr = explode('|', $val['remark']);
+			$objExcel->getActiveSheet()->setCellValue('A'.$i, $val['id']); 
+			$objExcel->getActiveSheet()->setCellValue('B'.$i, $val['name']); 
+			$objExcel->getActiveSheet()->setCellValue('C'.$i, $val['mobile']);
+			$objExcel->getActiveSheet()->setCellValue('D'.$i, $val['code']);
+			$objExcel->getActiveSheet()->setCellValue('E'.$i, empty($arr[0]) ? '不重要' : $arr[0]);
+			$objExcel->getActiveSheet()->setCellValue('F'.$i, empty($arr[1]) ? '不限价格' : $arr[1]);
+			$objExcel->getActiveSheet()->setCellValue('G'.$i, empty($arr[2]) ? '不限户型' : $arr[2]);			
+			$objExcel->getActiveSheet()->setCellValue('H'.$i, date("Y-m-d H:i:s",$val['addtime']));
+			$i++;
+		}
+		
+		//设置导出文件名
+		$outputFileName = "留言信息".date("Y-m-d").'.xls'; 
+		$xlsWriter = new \PHPExcel_Writer_Excel5($objExcel); 
+		header("Content-Type: application/force-download"); 
+		header("Content-Type: application/octet-stream"); 
+		header("Content-Type: application/download"); 
+		header('Content-Disposition:inline;filename="'.$outputFileName.'"'); 
+		header("Content-Transfer-Encoding: binary"); 
+		header("Expires: Mon, 26 Jul 1997 05:00:00 GMT"); 
+		header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT"); 
+		header("Cache-Control: must-revalidate, post-check=0, pre-check=0"); 
+		header("Pragma: no-cache"); 
+		$xlsWriter->save( "php://output" );
+	}
 	
 }
