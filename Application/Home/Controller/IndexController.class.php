@@ -205,7 +205,7 @@ class IndexController extends Controller {
 
 		$data['name'] = $name;
 		$data['mobile'] = $mobile;
-		$data['code'] = $appcode;
+		$data['appcode'] = $appcode;
 		$data['addtime'] = time();
 		$data['remark'] = $infos;
 		$r = M("feedback")->add($data);
