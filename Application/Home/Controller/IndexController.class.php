@@ -192,7 +192,7 @@ class IndexController extends Controller {
 		$name = I('name');
 		$mobile = I('tel');
 		$infos = I('infos');
-		$appcode = I("appcode");
+		$appcode = I("team");
 		if(mb_strlen($name) > 12 || $name == ''){
 			exit(json_encode(array('err'=>1,'msg'=>'请输入正确的姓名')));
 		}
@@ -227,7 +227,7 @@ class IndexController extends Controller {
 		$id = I("id");
 		$code = I('code');
 		$infos = I('infos');
-		$appcode = I("appcode");
+		$appcode = I("team");
 		$userInfo = I("userInfo",'','');
 		$appid = 'wx9b90ca70047bdc4a';
 		$secret = 'ae0d33de64f09256479a80a9d4c124db'; //ec3944510ecc15e6deb4fb5a15d1f44c
@@ -275,6 +275,41 @@ class IndexController extends Controller {
 		}
 
 	}
+
+	public function sendcode(){
+		//echo '666';
+		//exit();
+		$url = 'https://dx.ipyy.net/smsJson.aspx';
+		$mobile = '18672197927';
+		$data = array(
+					'account' => 'xd001275',
+					'password' => 'xd001275555',
+					'mobile' => $mobile,
+					'content' => '您的验证码：1439【同享好房】',
+					'action' => 'send',					
+			);
+		$res = $this->p_bcurl($url,$data);
+		var_dump($res);
+
+	}
+
+	/**
+     * post
+     * @param  [type] $url  [description]
+     * @param  [type] $data [description]
+     * @return [type]       [description]
+     */
+    protected function p_bcurl($url,$data){
+    	$ch = curl_init ();
+		curl_setopt ( $ch, CURLOPT_URL, $url );
+		curl_setopt ( $ch, CURLOPT_POST, 1 );
+		curl_setopt ( $ch, CURLOPT_HEADER, 0 );
+		curl_setopt ( $ch, CURLOPT_RETURNTRANSFER, 1 );
+		curl_setopt ( $ch, CURLOPT_POSTFIELDS, $data);
+		$res = curl_exec ( $ch );
+		curl_close ( $ch );
+		return $res;
+    }
 
 	
 }
