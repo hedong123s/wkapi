@@ -167,7 +167,7 @@ class IndexController extends Controller {
 
 			}
 		}
-		exit(json_encode(array('err'=>0,'msg'=>'查询成功','res'=>$res)));
+		exit(json_encode(array('err'=>"0",'msg'=>'查询成功','res'=>$res)));
 
     }
 
@@ -283,7 +283,7 @@ class IndexController extends Controller {
 		$mobile = '18672197927';
 		$data = array(
 					'account' => 'xd001275',
-					'password' => 'xd001275555',
+					'password' => md5('xd001275555'),
 					'mobile' => $mobile,
 					'content' => '您的验证码：1439【同享好房】',
 					'action' => 'send',					
