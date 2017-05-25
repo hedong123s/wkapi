@@ -277,20 +277,22 @@ class IndexController extends Controller {
 	}
 
 	public function sendcode(){
-		//echo '666';
-		//exit();
+		$mobile = I('mobile');
 		$url = 'https://dx.ipyy.net/smsJson.aspx';
-		$mobile = '18672197927';
-		$data = array(
+		$params = array(
 					'account' => 'xd001275',
 					'password' => md5('xd001275555'),
 					'mobile' => $mobile,
 					'content' => '您的验证码：1439【同享好房】',
 					'action' => 'send',					
 			);
-		$res = $this->p_bcurl($url,$data);
-		var_dump($res);
-
+		$res = Curl::request(POST, $url, $params);
+		$arr = json_decode($res);
+		if($arr['returnstatus'] == 'Success'){
+			return true;
+		}else{
+			return false;
+		}
 	}
 
 	/**

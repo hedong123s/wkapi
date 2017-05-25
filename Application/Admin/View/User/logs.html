@@ -69,7 +69,12 @@
       <td>
          <a href="{$r.avatarUrl}" target="_blank"><img src = '{$r.avatarUrl}' style="width=50px;height:50px;"/></a>
       </td>
-      <td>{$r.code}</td>
+      <td>
+        <if condition = "$r['appcode'] == 1">曹广标组</if>
+        <if condition = "$r['appcode'] == 1">卢向曦组</if>
+        <if condition = "$r['appcode'] == 1">张雅静组</if>
+
+      </td>
       <td>{$r.select}</td>
       <td>{$r.info}</td>
       <td>{$r.time|date="Y-m-d H:i:s",###}</td>
