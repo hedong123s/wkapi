@@ -215,7 +215,8 @@ class IndexController extends Controller {
 	}
 
 	public function manager(){
-		$res = M("wkmanager")->order('rand()')->limit(3)->select();
+		$map['appcode'] = I("team");
+		$res = M("wkmanager")->where($map)->order('rand()')->limit(3)->select();
 		if($res){
 			exit(json_encode(array('err'=>0,'msg'=>'查询成功','res'=>$res)));
 		}
