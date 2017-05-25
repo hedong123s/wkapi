@@ -295,11 +295,11 @@ class IndexController extends Controller {
 			);
 		$res = Curl::request(POST, $url, $params);
 		$arr = json_decode($res);
-		var_dump($arr);
+		//var_dump($arr);
 		if($arr->returnstatus == 'Success'){
-			return true;
+			exit(json_encode(array('err'=>0,'msg'=>'验证码发送成功','res'=>1439)));
 		}else{
-			return false;
+			exit(json_encode(array('err'=>1,'msg'=>$arr->message)));
 		}
 	}
 
