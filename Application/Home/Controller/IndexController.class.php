@@ -295,7 +295,8 @@ class IndexController extends Controller {
 			);
 		$res = Curl::request(POST, $url, $params);
 		$arr = json_decode($res);
-		if($arr['returnstatus'] == 'Success'){
+		var_dump($arr);
+		if($arr->returnstatus == 'Success'){
 			return true;
 		}else{
 			return false;
