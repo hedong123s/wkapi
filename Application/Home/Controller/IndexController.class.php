@@ -284,7 +284,7 @@ class IndexController extends Controller {
 	}
 
 	public function sendcode(){
-		$mobile = I('linkTel','','');
+		$mobile = I('mobile','','');
 		Log::write($mobile,'mobile');
 		$url = 'https://dx.ipyy.net/smsJson.aspx';
 		$params = array(
