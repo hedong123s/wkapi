@@ -215,7 +215,13 @@ class IndexController extends Controller {
 	}
 
 	public function manager(){
-		$map['team_id'] = I("team") != 666 ? I("team") : '';
+		$id = I("team");
+		if($id != 666){
+			$map['team_id'] = $id;
+		}else{
+			$map = [];
+		}
+		 
 		$res = M("wkmanager")->where($map)->order('rand()')->limit(3)->select();
 		if($res){
 			exit(json_encode(array('err'=>0,'msg'=>'查询成功','res'=>$res)));
