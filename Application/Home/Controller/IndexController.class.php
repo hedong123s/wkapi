@@ -167,7 +167,8 @@ class IndexController extends Controller {
 
 			}
 		}
-		exit(json_encode(array('err'=>"0",'msg'=>'查询成功','res'=>$res)));
+		exit($_GET['callback'].json_encode(array('err'=>"0",'msg'=>'查询成功','res'=>$res)));
+		//echo $_GET['callback']."(".json_encode($arr).")";
 
     }
 
