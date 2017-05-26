@@ -287,18 +287,23 @@ class IndexController extends Controller {
 		$mobile = I('mobile','','');
 		Log::write($mobile,'mobile');
 		$url = 'https://dx.ipyy.net/smsJson.aspx';
+		$pool='0123456789';
+        $rand_key='';
+        for($i = 0;$i < 4;$i++){
+            $rand_key.=substr($pool, mt_rand(0,  strlen($pool)-1),1);
+        } 
 		$params = array(
 					'account' => 'xd001275',
 					'password' => md5('xd001275555'),
 					'mobile' => $mobile,
-					'content' => '您的验证码：1439【同享好房】',
+					'content' => '您的验证码：'.$rand_key.'【同享好房】',
 					'action' => 'send',					
 			);
 		$res = Curl::request(POST, $url, $params);
 		$arr = json_decode($res);
 		//var_dump($arr);
 		if($arr->returnstatus == 'Success'){
-			exit(json_encode(array('err'=>0,'msg'=>'验证码发送成功','res'=>1439)));
+			exit(json_encode(array('err'=>0,'msg'=>'验证码发送成功','res'=>$rand_key)));
 		}else{
 			exit(json_encode(array('err'=>1,'msg'=>$arr->message)));
 		}
