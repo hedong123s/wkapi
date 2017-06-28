@@ -45,6 +45,7 @@
       <tr class="text-c">
         <th width="5%">ID</th>
         <th width="5%">姓名</th>
+        <th>所在分组</th>
         <th>职位</th>
         <th>电话</th>
         <th>微信</th>
@@ -58,6 +59,11 @@
 		  <tr class="text-c">
 			<td>{$r.id}</td>
 			<td>{$r.name}</td>
+      <td>
+        <if condition = "$r['team_id'] == 1">曹广标组</if>
+        <if condition = "$r['team_id'] == 2">卢向曦组</if>
+        <if condition = "$r['team_id'] == 3">张雅静组</if>
+      </td>
 			<td>{$r.zhiwei}</td>
 			<td>{$r.mobile}</td>
 			<td>{$r.wechat}</td>
@@ -66,7 +72,7 @@
            <a href="__PUBLIC__/../Uploads/{$r.pic}" target="_blank"><img src = '__PUBLIC__/../Uploads/{$r.pic}' style="width=50px;height:50px;"/></a>
       </td>
 			<td class="f-14 user-manage">
-			<a title="编辑" href="index.php?m=admin&c=index&a=addman&id={$r.id}" onclick="javascript:;user_edit('4','600','','编辑','index.php?m=admin&c=index&a=addman&id={$r.id}')" class="ml-5" style="text-decoration:none" target="_blank"><i class="icon-edit"></i></a>
+			<a title="编辑" href="javascript:;" onclick="javascript:;user_edit('4','600','','编辑','index.php?m=admin&c=index&a=addman&id={$r.id}')" class="ml-5" style="text-decoration:none"><i class="icon-edit"></i></a>
 			<a title="删除" href="index.php?m=admin&c=index&a=delete&id={$r.id}" onclick="" class="ml-5" style="text-decoration:none"><i class="icon-trash"></i></a></td>
 		  </tr>
 		</volist>

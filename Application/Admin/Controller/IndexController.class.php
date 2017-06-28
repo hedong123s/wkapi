@@ -72,6 +72,7 @@ class IndexController extends BaseController {
             $arr['pic'] = $info['pic']['savepath'].$info['pic']['savename'];
         }
         $arr['name'] = I('name');
+        $arr['team_id'] = I('team_id');
         $arr['zhiwei'] = I('zhiwei');
         $arr['mobile'] = I('mobile');
         $arr['wechat'] = I('wechat');

@@ -37,6 +37,21 @@
       <div class="col-4"> </div>
     </div>
 
+    
+    <div class="row cl">
+      <label class="form-label col-3">所属分组</label>
+      <div class="formControls col-5"> <span class="select-box">
+        <select class="select" size="1" name="team_id" datatype="*" nullmsg="请选择所属分组">
+          <option value="" selected>请选择所属分组</option>
+          <option value="1" <if condition="$r['team_id'] == '1'">selected</if>>曹广标组</option>
+          <option value="2" <if condition="$r['team_id'] == '2'">selected</if>>卢向曦组</option>
+          <option value="3" <if condition="$r['team_id'] == '3'">selected</if>>张雅静组</option>
+
+        </select>
+        </span> </div>
+      <div class="col-4"> </div>
+    </div>
+
 
 	<div class="row cl">
       <label class="form-label col-3"><span class="c-red">*</span>职位：</label>
