@@ -209,6 +209,7 @@ class IndexController extends Controller {
 		$data['appcode'] = $appcode;
 		$data['addtime'] = time();
 		$data['remark'] = $infos;
+		$data['content'] = '欢迎使用“同享好房"小程序，您的使用编码为000342';
 		$rid = M("feedback")->add($data);
 		$r = M("feedback")->where(array("id"=>$rid))->find();
 		if($r){
