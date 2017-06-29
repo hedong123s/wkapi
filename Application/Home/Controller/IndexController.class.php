@@ -209,7 +209,8 @@ class IndexController extends Controller {
 		$data['appcode'] = $appcode;
 		$data['addtime'] = time();
 		$data['remark'] = $infos;
-		$r = M("feedback")->add($data);
+		$rid = M("feedback")->add($data);
+		$r = M("feedback")->where(array("id"=>$rid))->find();
 		if($r){
 			exit(json_encode(array('err'=>0,'msg'=>'信息已录入','res'=>$r)));
 		}
