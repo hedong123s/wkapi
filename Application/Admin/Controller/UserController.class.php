@@ -19,7 +19,12 @@ class UserController extends BaseController {
 	 * @return [type] [description]
 	 */
 	public function feedback(){
-		$res = M('feedback')->order("id desc")->select();
+		if(session('team_id') != ''){
+			$arr['appcode'] = session('team_id');
+			$res = M('feedback')->where($arr)->order("id desc")->select();
+		}else{
+			$res = M('feedback')->order("id desc")->select();
+		}		
 		$this->assign("res",$res);
 		$this->display();
 	}
@@ -29,7 +34,12 @@ class UserController extends BaseController {
 	 * @return [type] [description]
 	 */
 	public function logs(){
-		$res = M('wklog')->order("time desc")->select();
+		if(session('team_id') != ''){
+			$arr['appcode'] = session('team_id');
+			$res = M('wklog')->where($arr)->order("time desc")->select();
+		}else{
+			$res = M('wklog')->order("time desc")->select();
+		}
 		$this->assign("res",$res);
 		$this->display();
 	}
@@ -53,7 +63,12 @@ class UserController extends BaseController {
 		$objExcel->getActiveSheet()->setCellValue('G1', '浏览');
 		$objExcel->getActiveSheet()->setCellValue('H1','添加时间');
 
-		$res = M('wklog')->order("time desc")->select();
+		if(session('team_id') != ''){
+			$arr['appcode'] = session('team_id');
+			$res = M('wklog')->where($arr)->order("time desc")->select();
+		}else{
+			$res = M('wklog')->order("time desc")->select();
+		}
 		
 		$i=2;
 		foreach($res as $val){
@@ -103,7 +118,12 @@ class UserController extends BaseController {
 		$objExcel->getActiveSheet()->setCellValue('G1', '户型');
 		$objExcel->getActiveSheet()->setCellValue('H1','添加时间');
 
-		$res = M('feedback')->order("addtime desc")->select();
+		if(session('team_id') != ''){
+			$arr['appcode'] = session('team_id');
+			$res = M('feedback')->where($arr)->order("id desc")->select();
+		}else{
+			$res = M('feedback')->order("id desc")->select();
+		}	
 		
 		$i=2;
 		foreach($res as $val){

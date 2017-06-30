@@ -26,12 +26,12 @@
 <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
 <![endif]-->
-<title>万科找房v1.0</title>
-<meta name="keywords" content="H-ui.admin v2.2,H-ui网站后台模版,后台模版下载,后台管理系统模版,HTML后台模版下载">
-<meta name="description" content="H-ui.admin v2.2，是一款由国人开发的轻量级扁平化网站后台模板，完全免费开源的网站后台管理系统模版，适合中小型CMS后台系统。">
+<title>万科找房v2.0</title>
+<meta name="keywords" content="H-ui.admin v2.2">
+<meta name="description" content="H-ui.admin v2.2">
 </head>
 <body>
-<header class="Hui-header cl"> <a class="Hui-logo l" title="H-ui.admin v2.2" href="/">万科找房v1.0</a> <a class="Hui-logo-m l" href="/" title="H-ui.admin">H-ui</a> <span class="Hui-subtitle l">V2.2</span> <span class="Hui-userbox"><span class="c-white">超级管理员：admin</span> <a class="btn btn-danger radius ml-10" href="#" title="退出"><i class="icon-off"></i> 退出</a></span> <a aria-hidden="false" class="Hui-nav-toggle" href="#"></a> </header>
+<header class="Hui-header cl"> <a class="Hui-logo l" title="H-ui.admin v2.2" href="/">万科找房v1.0</a> <a class="Hui-logo-m l" href="/" title="H-ui.admin">H-ui</a> <span class="Hui-subtitle l">V2.2</span> <span class="Hui-userbox"><span class="c-white">超级管理员：<?php echo session('admin');?></span> <a class="btn btn-danger radius ml-10" href="index.php?m=admin&c=index&a=logout" title="退出"><i class="icon-off"></i> 退出</a></span> <a aria-hidden="false" class="Hui-nav-toggle" href="#"></a> </header>
 <aside class="Hui-aside">
   <input runat="server" id="divScrollValue" type="hidden" value="" />
   <div class="menu_dropdown bk_2">
@@ -45,6 +45,7 @@
       </dd>
     </dl>
 
+    <if condition = "session('admin') == 'admin'">
     <dl id="menu-user">
       <dt><i class="icon-user"></i> 经理人管理<i class="iconfont menu_dropdown-arrow">&#xf02a9;</i></dt>
       <dd>
@@ -63,6 +64,17 @@
         </ul>
       </dd>
     </dl>
+
+    <dl id="menu-system">
+      <dt><i class="icon-cogs"></i> 后台账号管理<i class="iconfont menu_dropdown-arrow">&#xf02a9;</i></dt>
+      <dd>
+        <ul>
+          <li><a _href="index.php?m=admin&c=account&a=index" href="javascript:void(0)">管理员列表</a></li>
+        </ul>
+      </dd>
+     
+    </dl>
+    </if>
   </div>
 </aside>
 <div class="dislpayArrow"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>

@@ -194,6 +194,7 @@ class IndexController extends Controller {
 		$mobile = I('tel');
 		$infos = I('infos');
 		$appcode = I("team");
+		$qudao = I("qudao");
 		if(mb_strlen($name) > 12 || $name == ''){
 			exit(json_encode(array('err'=>1,'msg'=>'请输入正确的姓名')));
 		}

@@ -12,16 +12,30 @@ class IndexController extends BaseController {
     	$name = I('name');
     	$password = I('password');
 
-    	if($name !== 'admin' || $password !== '123123'){
-    		$this->error('信息错误','index.php?m=admin&c=index&a=login');
-    	}else{
-    		session('admin','1');
-    		$this->success('登录成功','index.php?m=admin&c=index&a=index');
-    	}
+        if($name == 'admin'){
+            if($password !== '123123'){
+                $this->error('信息错误','index.php?m=admin&c=index&a=login');
+            }else{
+                session('admin','admin');
+                $this->success('登录成功','index.php?m=admin&c=index&a=index');
+            }
+        }else{
+            $rr = M("admin")->where(array("username"=>$name,'password'=>$password))->find();
+            if($rr){
+                session('admin',$rr['username']);
+                session('team_id',$rr['team_id']);
+                $this->success('登录成功','index.php?m=admin&c=index&a=index');
+            }else{
+                $this->error('信息错误','index.php?m=admin&c=index&a=login');
+            }
+        }
+
+    	
     }
 
     public function logout(){
-        session('admin','0');
+        session('admin',null);
+        session('team_id',null);
         $this->success('已退出登录','index.php?m=admin&c=index&a=login');
     }
 
