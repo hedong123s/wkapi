@@ -215,6 +215,7 @@ class IndexController extends Controller {
 		$data['mobile'] = $mobile;
 		$data['appcode'] = $appcode;
 		$data['addtime'] = time();
+		$data['qudao'] = $qudao;
 		$data['remark'] = $infos;		
 		$rid = M("feedback")->add($data);
 		$content = '欢迎使用“同享好房"小程序，您的使用编码为000'.$rid;
