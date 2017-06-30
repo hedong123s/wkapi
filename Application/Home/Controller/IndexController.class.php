@@ -218,8 +218,10 @@ class IndexController extends Controller {
 		$data['remark'] = $infos;		
 		$rid = M("feedback")->add($data);
 		$content = '欢迎使用“同享好房"小程序，您的使用编码为000'.$rid;
-		M("feedback")->where(array("id"=>$rid))->update(array("content"=>$content));
-		$r = M("feedback")->where(array("id"=>$rid))->find();
+		if(M("feedback")->where(array("id"=>$rid))->update(array("content"=>$content))){
+			$r = M("feedback")->where(array("id"=>$rid))->find();
+		}
+		
 		if($r){
 			exit(json_encode(array('err'=>0,'msg'=>'信息已录入','res'=>$r)));
 		}
