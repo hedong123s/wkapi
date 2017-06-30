@@ -201,17 +201,24 @@ class IndexController extends Controller {
 		if(!preg_match("/^1[34578]{1}\d{9}$/",$mobile)){
 			exit(json_encode(array('err'=>2,'msg'=>'请输入正确的电话')));
 		} 
-		if(M('feedback')->where(array('mobile'=>$mobile))->find()){
-			exit(json_encode(array('err'=>3,'msg'=>'您的手机号码已经记录')));
-		}
+		if($qudao != ''){
+			if(M('feedback')->where(array('mobile'=>$mobile,'qudao'=>$qudao))->find()){
+				exit(json_encode(array('err'=>3,'msg'=>'您的手机号码已经记录')));
+			}
+		}else{
+			if(M('feedback')->where(array('mobile'=>$mobile))->find()){
+				exit(json_encode(array('err'=>3,'msg'=>'您的手机号码已经记录')));
+			}
+		}		
 
 		$data['name'] = $name;
 		$data['mobile'] = $mobile;
 		$data['appcode'] = $appcode;
 		$data['addtime'] = time();
-		$data['remark'] = $infos;
-		$data['content'] = '欢迎使用“同享好房"小程序，您的使用编码为000342';
+		$data['remark'] = $infos;		
 		$rid = M("feedback")->add($data);
+		$content = '欢迎使用“同享好房"小程序，您的使用编码为000'.$rid;
+		M("feedback")->where(array("id"=>$rid))->update(array("content"=>$content));
 		$r = M("feedback")->where(array("id"=>$rid))->find();
 		if($r){
 			exit(json_encode(array('err'=>0,'msg'=>'信息已录入','res'=>$r)));
