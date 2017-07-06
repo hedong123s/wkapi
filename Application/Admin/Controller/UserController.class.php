@@ -128,18 +128,18 @@ class UserController extends BaseController {
 		
 		$i=2;
 		foreach($res as $val){
-			if($val['remark'] == 'undefined') $arr = '||不限户型';
+			if($val['remark'] == 'undefined') $val['remark'] = '||不限户型';
 			if($val['appcode'] == '1') $appcode = '曹广标组';
 			if($val['appcode'] == '2') $appcode = '卢向曦组';
 			if($val['appcode'] == '3') $appcode = '张雅静组';
 			if($val['appcode'] == '4') $appcode = '网拓组';	
 			if($val['appcode'] == '666') $appcode = '';	
-			if($val['qudao'] == '1') $qudao   = '渠道一';
-			if($val['qudao'] == '2') $qudao   = '渠道二';
-			if($val['qudao'] == '3') $qudao   = '渠道三';
-			if($val['qudao'] == '4') $qudao   = '渠道四';
-			if($val['qudao'] == '5') $qudao   = '渠道五';
-			if($val['qudao'] == '666') $qudao   = '';
+			if($val['qudao'] === '1') $qudao   = '渠道一';
+			if($val['qudao'] === '2') $qudao   = '渠道二';
+			if($val['qudao'] === '3') $qudao   = '渠道三';
+			if($val['qudao'] === '4') $qudao   = '渠道四';
+			if($val['qudao'] === '5') $qudao   = '渠道五';
+			if($val['qudao'] === '666') $qudao = '';
 			$arr = explode('|', $val['remark']);
 			$objExcel->getActiveSheet()->setCellValue('A'.$i, $val['id']); 
 			$objExcel->getActiveSheet()->setCellValue('B'.$i, $val['name']); 
