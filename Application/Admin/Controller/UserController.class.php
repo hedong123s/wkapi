@@ -113,10 +113,11 @@ class UserController extends BaseController {
 		$objExcel->getActiveSheet()->setCellValue('B1', '姓名'); 
 		$objExcel->getActiveSheet()->setCellValue('C1', '电话');
 		$objExcel->getActiveSheet()->setCellValue('D1', '来源');
-		$objExcel->getActiveSheet()->setCellValue('E1', '地区');
-		$objExcel->getActiveSheet()->setCellValue('F1', '价格');
-		$objExcel->getActiveSheet()->setCellValue('G1', '户型');
-		$objExcel->getActiveSheet()->setCellValue('H1','添加时间');
+		$objExcel->getActiveSheet()->setCellValue('E1', '渠道');
+		$objExcel->getActiveSheet()->setCellValue('F1', '地区');
+		$objExcel->getActiveSheet()->setCellValue('G1', '价格');
+		$objExcel->getActiveSheet()->setCellValue('H1', '户型');
+		$objExcel->getActiveSheet()->setCellValue('I1','添加时间');
 
 		if(session('team_id') != ''){
 			$arr['appcode'] = session('team_id');
@@ -127,15 +128,17 @@ class UserController extends BaseController {
 		
 		$i=2;
 		foreach($res as $val){
+			if($val['remark'] == 'undefined') $arr = '||不限户型';
 			$arr = explode('|', $val['remark']);
 			$objExcel->getActiveSheet()->setCellValue('A'.$i, $val['id']); 
 			$objExcel->getActiveSheet()->setCellValue('B'.$i, $val['name']); 
 			$objExcel->getActiveSheet()->setCellValue('C'.$i, $val['mobile']);
 			$objExcel->getActiveSheet()->setCellValue('D'.$i, $val['code']);
-			$objExcel->getActiveSheet()->setCellValue('E'.$i, empty($arr[0]) ? '不重要' : $arr[0]);
-			$objExcel->getActiveSheet()->setCellValue('F'.$i, empty($arr[1]) ? '不限价格' : $arr[1]);
-			$objExcel->getActiveSheet()->setCellValue('G'.$i, empty($arr[2]) ? '不限户型' : $arr[2]);			
-			$objExcel->getActiveSheet()->setCellValue('H'.$i, date("Y-m-d H:i:s",$val['addtime']));
+			$objExcel->getActiveSheet()->setCellValue('E'.$i, $val['qudao']);
+			$objExcel->getActiveSheet()->setCellValue('F'.$i, empty($arr[0]) ? '不重要' : $arr[0]);
+			$objExcel->getActiveSheet()->setCellValue('G'.$i, empty($arr[1]) ? '不限价格' : $arr[1]);
+			$objExcel->getActiveSheet()->setCellValue('H'.$i, empty($arr[2]) ? '不限户型' : $arr[2]);			
+			$objExcel->getActiveSheet()->setCellValue('I'.$i, date("Y-m-d H:i:s",$val['addtime']));
 			$i++;
 		}
 		

@@ -48,6 +48,7 @@
         <th>姓名</th>
         <th>电话</th>
         <th>来源</th>
+        <th>渠道</th>
         <th>选择</th>
         <th>添加时间</th>    
 
@@ -65,7 +66,22 @@
         <if condition = "$r['appcode'] == 3">张雅静组</if>
 
       </td>
-      <td>{$r.remark}</td>
+      <td>
+        <if condition = "$r['qudao'] == 1">渠道一</if>
+        <if condition = "$r['qudao'] == 2">渠道二</if>
+        <if condition = "$r['qudao'] == 3">渠道三</if>
+        <if condition = "$r['qudao'] == 4">渠道四</if>
+        <if condition = "$r['qudao'] == 5">渠道五</if>
+
+      </td>
+      <td>
+        <if condition="$r['remark'] == 'undefined'">
+          ||不限户型
+          <else/>
+          {$r.remark}
+        </if>
+        
+      </td>
 			<td>{$r.addtime|date="Y-m-d H:i:s",###}</td>
 		</volist>
     </tbody>
