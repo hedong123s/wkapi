@@ -139,7 +139,7 @@ class UserController extends BaseController {
 			if($val['qudao'] === '3') $qudao   = '渠道三';
 			if($val['qudao'] === '4') $qudao   = '渠道四';
 			if($val['qudao'] === '5') $qudao   = '渠道五';
-			if($val['qudao'] === '666') $qudao = '';
+			if($val['qudao'] == '666' || $val['qudao'] == '') $qudao = '';
 			$arr = explode('|', $val['remark']);
 			$objExcel->getActiveSheet()->setCellValue('A'.$i, $val['id']); 
 			$objExcel->getActiveSheet()->setCellValue('B'.$i, $val['name']); 
