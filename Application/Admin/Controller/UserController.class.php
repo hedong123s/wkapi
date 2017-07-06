@@ -129,12 +129,21 @@ class UserController extends BaseController {
 		$i=2;
 		foreach($res as $val){
 			if($val['remark'] == 'undefined') $arr = '||不限户型';
+			if($val['appcode'] == '1') $appcode = '曹广标组';
+			if($val['appcode'] == '2') $appcode = '卢向曦组';
+			if($val['appcode'] == '3') $appcode = '张雅静组';
+			if($val['appcode'] == '4') $appcode = '网拓组';	
+			if($val['appcode'] == '1') $qudao   = '渠道一';
+			if($val['appcode'] == '2') $qudao   = '渠道二';
+			if($val['appcode'] == '3') $qudao   = '渠道三';
+			if($val['appcode'] == '4') $qudao   = '渠道四';
+			if($val['appcode'] == '5') $qudao   = '渠道五';
 			$arr = explode('|', $val['remark']);
 			$objExcel->getActiveSheet()->setCellValue('A'.$i, $val['id']); 
 			$objExcel->getActiveSheet()->setCellValue('B'.$i, $val['name']); 
 			$objExcel->getActiveSheet()->setCellValue('C'.$i, $val['mobile']);
-			$objExcel->getActiveSheet()->setCellValue('D'.$i, $val['code']);
-			$objExcel->getActiveSheet()->setCellValue('E'.$i, $val['qudao']);
+			$objExcel->getActiveSheet()->setCellValue('D'.$i, $appcode);
+			$objExcel->getActiveSheet()->setCellValue('E'.$i, $qudao);
 			$objExcel->getActiveSheet()->setCellValue('F'.$i, empty($arr[0]) ? '不重要' : $arr[0]);
 			$objExcel->getActiveSheet()->setCellValue('G'.$i, empty($arr[1]) ? '不限价格' : $arr[1]);
 			$objExcel->getActiveSheet()->setCellValue('H'.$i, empty($arr[2]) ? '不限户型' : $arr[2]);			
