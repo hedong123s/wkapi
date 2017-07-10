@@ -133,6 +133,7 @@ class UserController extends BaseController {
 			if($val['appcode'] == '2') $appcode = '卢向曦组';
 			if($val['appcode'] == '3') $appcode = '张雅静组';
 			if($val['appcode'] == '4') $appcode = '网拓组';	
+			if($val['appcode'] == '5') $appcode = '梁日昌组';	
 			if($val['appcode'] == '666') $appcode = '';	
 			if($val['qudao'] === '1') $qudao   = '渠道一';
 			if($val['qudao'] === '2') $qudao   = '渠道二';
