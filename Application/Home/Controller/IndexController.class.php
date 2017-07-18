@@ -52,8 +52,11 @@ class IndexController extends Controller {
 					$v=6;
 				}elseif($v == '3.5万--4万'){
 					$v=7;
-				}elseif($v == '4万以上'){
+				}elseif($v == '4万--5万'){
 					$v=8;
+				}
+				elseif($v == '5万以上'){
+					$v=9;
 				}
 			}
 			$newprice[] = $v;	
@@ -77,7 +80,7 @@ class IndexController extends Controller {
 				}elseif($v == '五房'){
 					$v='%五房%';
 				}elseif($v == '别墅'){
-					$v='%五房%';
+					$v='%别墅%';
 				}
 				$newhuxin[] = $v;	
 				$arr['huxin_type'] = array('like',$newhuxin,'OR');
@@ -218,13 +221,19 @@ class IndexController extends Controller {
 		$data['qudao'] = $qudao;
 		$data['remark'] = $infos;		
 		$rid = M("feedback")->add($data);
-		$content = '欢迎使用“同享好房"小程序，您的使用编码为000'.$rid;
+		$rr = M('qudao')->where(array('qudao_id'=>$qudao))->find();
+		if($rr){
+			$content = $rr['content'];
+		}else{
+			$content = '欢迎使用同享好房小程序，您的使用编码为';
+		}
+		$content = $content.'000'.$rid;
 		if(M("feedback")->where(array("id"=>$rid))->save(array("content"=>$content))){
 			$r = M("feedback")->where(array("id"=>$rid))->find();
 		}
 		
 		if($r){
-			exit(json_encode(array('err'=>0,'msg'=>'信息已录入','res'=>$r)));
+			exit(json_encode(array('err'=>0,'msg'=>'您的信息已登记成功，感谢您使用“同享好房”小程序！','res'=>$r)));
 		}
 	}
 
